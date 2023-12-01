@@ -215,9 +215,37 @@ Focusing on a specified ground-truth region leads to a 4.1% increase in top-1 ac
           </div>
         </div>
       </div>
-</section>
+</section><br>
 
-<section class="section" id="Alpha-CLIP">
+<section class="section" id="Alpha-CLIP usage">
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-six-fifths">
+          <h2 class="title is-3"> Alpha-CLIP Usage</h2>
+        </div>
+      </div>
+      <div class="container is-max-desktop">
+        <div class="columns is-centered">
+          <div class="column is-full-width">
+            <div class="content has-text-justified">
+              <p>
+                Alpha-CLIP can enhance CLIP across a wide array of downstream tasks, applying a <b>plug-and-play</b> methodology that permeates diverse domains, spanning from <b>perception to generation</b> in <b>2D and 3D applications</b>. We show downstream tasks of Alpha-CLIP and their advantages over the original CLIP in the following figure and table.
+				<centering>
+                  <div style="text-align: center;">
+                    <img id="teaser" width="100%" src="static/images/teaser.png">     
+                  </div><br>
+                <centering>
+                  <div style="text-align: center;">
+                    <img id="teaser" width="100%" src="static/images/usage_table1.png">     
+                  </div> 
+              </p>
+            </div>
+            </b></font>
+          </div>
+        </div>
+      </div>
+    </section>
+
+<section class="section" id="Alpha-CLIP pipeline">
       <div class="columns is-centered has-text-centered">
         <div class="column is-six-fifths">
           <h2 class="title is-3"> Alpha-CLIP Pipeline</h2>
@@ -245,35 +273,6 @@ Focusing on a specified ground-truth region leads to a 4.1% increase in top-1 ac
 <section class="section" id="Alpha-CLIP">
       <div class="columns is-centered has-text-centered">
         <div class="column is-six-fifths">
-          <h2 class="title is-3"> Alpha-CLIP Usage</h2>
-        </div>
-      </div>
-      <div class="container is-max-desktop">
-        <div class="columns is-centered">
-          <div class="column is-full-width">
-            <div class="content has-text-justified">
-              <p>
-                Alpha-CLIP can enhance CLIP across a wide array of downstream tasks, applying a <b>plug-and-play</b> methodology that permeates diverse domains, spanning from <b>perception to generation</b> in <b>2D and 3D applications</b>. We show downstream tasks of Alpha-CLIP and their advantages over the original CLIP in the following table and figure.
-                <centering>
-                  <div style="text-align: center;">
-                    <img id="teaser" width="100%" src="static/images/usage_table1.png">     
-                  </div> <br>
-				<centering>
-                  <div style="text-align: center;">
-                    <img id="teaser" width="100%" src="static/images/teaser.png">     
-                  </div>
-              </p>
-            </div>
-            </b></font>
-          </div>
-        </div>
-      </div>
-    </section>
-
-
-<section class="section" id="Alpha-CLIP">
-      <div class="columns is-centered has-text-centered">
-        <div class="column is-six-fifths">
           <h2 class="title is-3"> Alpha-CLIP in MLLM</h2>
         </div>
       </div>
@@ -282,14 +281,15 @@ Focusing on a specified ground-truth region leads to a 4.1% increase in top-1 ac
           <div class="column is-full-width">
             <div class="content has-text-justified">
               <p>
-                We replace CLIP used in BLIP-2 and LLaVA-1.5 with our Alpha-CLIP to make MLLM directly focus on <b>user-defined region</b> in vision-language tasks such as <b>region level captioning</b> and <b>VQA</b>. Besides qualitative results, we also provide the quantitative region level captioning results of Alpha-CLIP with LLaVA-1.5 on Visual Genome and RefCOCOg.
+                We replace CLIP used in BLIP-2 and LLaVA-1.5 with our Alpha-CLIP to make MLLM directly focus on <b>user-defined region</b> in vision-language tasks such as <b>region level captioning</b> and <b>VQA</b>. All cases shown here are made simply by replacing the original CLIP of BLIP2 or LLaVA-1.5 with a <b>plug-in</b> Alpha-CLIP without further tuning.
                 <centering>
                   <div style="text-align: center;">
-                    <img id="mllm" width="100%" src="static/images/mllm4.png">     
+                    <img id="mllm" width="100%" src="static/images/mllm_more1.png">     
                   </div>
               </p>
             </div> <br>
 			<!--      results-->
+			<p>Besides qualitative results, we also provide quantitative region captioning results of Alpha-CLIP with LLaVA-1.5 on Visual Genome and RefCOCOg.</p>
 			<div style="text-align: center;">
 				<table border="1" cellspacing="0" style="width: 92%; border-collapse: collapse; text-align: center; margin: 0 auto;">
 					<caption><strong>Performance of Alpha-CLIP in Region-Level Captioning</strong>: We report METEOR and CIDEr metrics on Visual Genome and refCOCOg Datasets, demonstrating competitive outcomes.</caption>
@@ -377,6 +377,75 @@ images. Other rows represent the outcomes of Alpha-CLIP with highlighted regions
       </div>
     </section>
 
+<section class="section" id="Alpha-CLIP in 3D">
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-six-fifths">
+          <h2 class="title is-3"> Alpha-CLIP in 3D Object Generation</h2>
+        </div>
+      </div>
+      <div class="container is-max-desktop">
+        <div class="columns is-centered">
+          <div class="column is-full-width">
+			<div class="content has-text-justified">
+			  <p><h2 class="title is-5">Alpha-CLIP in Point-E</h2> We demonstrate that Alpha-CLIP is helpful in two cases: 
+			  <ol>
+				<li>When Point-E generates the point cloud with some parts missing, users can highlight the missing part in the condition image to remind the diffusion model to pay more attention to that part and <b>fix this missing parts problem</b>.</li>
+				<li>Users can <b>highlight the part that needs to be emphasized</b> on the 2D image.</li>
+			  </ol>
+				<div style="text-align: center;">
+				<img src="static/gifs/pointe.gif" alt="First GIF" width="800" height="800">
+				</div>
+              <p><br><h2 class="title is-5">Alpha-CLIP in PureCLIPNeRF</h2> We replace CLIP model with Alpha-CLIP in PureCLIPNeRF to generate 3D objects, and tests are conducted with and without background augmentation. As shown in the following figure, with Alpha-CLIP, PureCLIPNeRF generates objects that <b>closely align with the provided textual prompts</b>(especially bolded text) in terms of shape and color. Furthermore, there is an enhancement in the <b>overall coherence of the generated objects</b>, coupled with notable <b>aesthetic qualities</b>. </p> </div>
+            </b></font>
+			<div style="text-align: center;">
+			<img src="static/gifs/fountain0.gif" alt="First GIF" width="250" height="250">
+			<img src="static/gifs/fountain2.gif" alt="First GIF" width="250" height="250">
+			<img src="static/gifs/fountain3.gif" alt="First GIF" width="250" height="250">
+			<img src="static/gifs/fountain1.gif" alt="First GIF" width="250" height="250">
+			<p>A <b>beautifully</b> carved <b>square</b> fountain with an <b>ornate statue</b> standing in the <b>center</b>.</p>
+			<div style="text-align: center;">
+			<img src="static/gifs/candle2.gif" alt="First GIF" width="250" height="250">
+			<img src="static/gifs/candle0.gif" alt="First GIF" width="250" height="250">
+			<img src="static/gifs/candle3.gif" alt="First GIF" width="250" height="250">
+			<img src="static/gifs/candle1.gif" alt="First GIF" width="250" height="250">
+			<p>A <b>silver candlestick</b> with <b>several</b> burning candles.</p>
+			<div style="text-align: center;">
+			<img src="static/gifs/hat3.gif" alt="First GIF" width="250" height="250">
+			<img src="static/gifs/hat1.gif" alt="First GIF" width="250" height="250">
+			<img src="static/gifs/hat2.gif" alt="First GIF" width="250" height="250">
+			<img src="static/gifs/hat0.gif" alt="First GIF" width="250" height="250">
+			<p>A unique <b>officer hat</b>, black with <b>gold trim</b>, adds a sense of authority.</p>
+			<div style="text-align: center;">
+			<img src="static/gifs/tokyo2.gif" alt="First GIF" width="250" height="250">
+			<img src="static/gifs/tokyo0.gif" alt="First GIF" width="250" height="250">
+			<img src="static/gifs/tokyo3.gif" alt="First GIF" width="250" height="250">
+			<img src="static/gifs/tokyo1.gif" alt="First GIF" width="250" height="250">
+			<p><b>Tokyo city</b>; trending on artstation.</p>
+			</div>
+			<centering>
+			  <div style="text-align: center;">
+				<img id="teaser" width="80%" src="static/images/pureclip.png">     
+			  </div>
+				<!-- Video
+               <video id="pureclip" autoplay muted loop playsinline height="60%">
+				<source src="./static/videos/pureclip2.mp4"
+						type="video/mp4">
+			  </video>
+			  -->
+				<!--Image
+				<centering>
+                  <div style="text-align: center;">
+                    <img id="teaser" width="100%" src="static/images/3d_append_pureclip.png">     
+                  </div>
+				 -->
+              
+            
+          </div>
+        </div>
+      </div>
+    </section>
+
+
 <section class="section" id="Alpha-CLIP">
       <div class="columns is-centered has-text-centered">
         <div class="column is-six-fifths">
@@ -404,33 +473,7 @@ images. Other rows represent the outcomes of Alpha-CLIP with highlighted regions
       </div>
     </section>
 
-<section class="section" id="Alpha-CLIP in 3D">
-      <div class="columns is-centered has-text-centered">
-        <div class="column is-six-fifths">
-          <h2 class="title is-3"> Alpha-CLIP in 3D Object Generation</h2>
-        </div>
-      </div>
-      <div class="container is-max-desktop">
-        <div class="columns is-centered">
-          <div class="column is-full-width">
-            <div class="content has-text-justified">
-              <p>
-			  	加入部分好的Point-e case
-				可以考虑弄成旋转的<br>
-                <h2 class="title is-5">Alpha-CLIP in PureCLIPNeRF</h2> We replace CLIP model with Alpha-CLIP in PureCLIPNeRF to generate 3D objects, and tests are conducted with and without background augmentation. As shown in the following figure, with Alpha-CLIP, PureCLIPNeRF generates objects that <b>closely align with the provided textual prompts</b>(especially bolded text) in terms of shape and color. Furthermore, there is an enhancement in the <b>overall coherence of the generated objects</b>, coupled with notable <b>aesthetic qualities</b>.
-                <centering>
-                  <div style="text-align: center;">
-                    <img id="teaser" width="100%" src="static/images/3d_append_pureclip.png">     
-                  </div>
-              </p>
-            </div>
-            </b></font>
-          </div>
-        </div>
-      </div>
-    </section>
-
-<section class="section" id="Alpha-CLIP in 3D">
+<section class="section" id="Alpha-CLIP Attn">
       <div class="columns is-centered has-text-centered">
         <div class="column is-six-fifths">
           <h2 class="title is-3"> Alpha-CLIP Attention Map Visualization</h2>
