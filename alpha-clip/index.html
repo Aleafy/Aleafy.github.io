@@ -128,9 +128,12 @@
       <div class="columns is-centered">
         <div class="column has-text-centered">
           <h1 class="title is-1 publication-title"><img id="logo" width="5%" src="static/images/icon.png"> <span class="rainbow-text">Alpha-CLIP</span>: A CLIP Model Focusing on Wherever You Want</h1>
-          <div class="is-size-5 publication-authors"> <span class="author-block"> <a href="https://github.com/SunzeY">Zeyi Sun</a><sup>1,3</sup>,</span> <span class="author-block"> <a href="https://github.com/Aleafy">Ye Fang</a><sup>2,3</sup>,</span> <span class="author-block"> <a href="https://wutong16.github.io/">Tong Wu</a><sup>3,4</sup>, </span> <span class="author-block"> <a href="https://panzhang0212.github.io/">Pan Zhang</a><sup>3</sup>, </span> </div> <div class="is-size-5 publication-authors"> <span class="author-block"> <a href="https://yuhangzang.github.io/">Yuhang Zang</a><sup>3</sup>, </span> <span class="author-block"> <a href="https://aimerykong.github.io/">Shu Kong</a><sup>5,6</sup>, </span> <span class="author-block"> <a href="http://yjxiong.me/">Yuanjun Xiong</a><sup>7</sup>, </span> <span class="author-block"> <a href="http://dahua.site/">Dahua Lin</a><sup>3,4</sup>, </span> <span class="author-block"> <a href="https://myownskyw7.github.io/">Jiaqi Wang</a><sup>3</sup> </span> </div>
-          <div class="is-size-5 publication-authors"> <span class="author-block"><sup>1</sup>Shanghai Jiao Tong University,</span> <span class="author-block"><sup>2</sup>Fudan University,</span> <span class="author-block"><sup>3</sup>Shanghai Artificial Intelligence Lab,</span><br>
-              <span class="author-block"><sup>4</sup>The Chinese University of Hong Kong,</span> <span class="author-block"><sup>5</sup>Texas A&M University,</span> <span class="author-block"><sup>6</sup>University of Macau,</span> <span class="author-block"><sup>7</sup>Amazon AI</span> </div>
+          <div class="is-size-5 publication-authors"> <span class="author-block"> <a href="https://github.com/SunzeY">Zeyi Sun</a><sup>*1,4</sup>,</span> <span class="author-block"> <a href="https://github.com/Aleafy">Ye Fang</a><sup>*2,4</sup>,</span> <span class="author-block"> <a href="https://wutong16.github.io/">Tong Wu</a><sup>3,4</sup>, </span> <span class="author-block"> <a href="https://panzhang0212.github.io/">Pan Zhang</a><sup>4</sup>, </span> </div> <div class="is-size-5 publication-authors"> <span class="author-block"> <a href="https://yuhangzang.github.io/">Yuhang Zang</a><sup>4</sup>, </span> <span class="author-block"> <a href="https://aimerykong.github.io/">Shu Kong</a><sup>5,6</sup>, </span> <span class="author-block"> <a href="http://yjxiong.me/">Yuanjun Xiong</a><sup>7</sup>, </span> <span class="author-block"> <a href="http://dahua.site/">Dahua Lin</a><sup>3,4</sup>, </span> <span class="author-block"> <a href="https://myownskyw7.github.io/">Jiaqi Wang</a><sup>&dagger;4</sup> </span> </div>
+          <div class="is-size-5 publication-authors"> <span class="author-block"><sup>1</sup>Shanghai Jiao Tong University,</span> <span class="author-block"><sup>2</sup>Fudan University,</span>  <span class="author-block"><sup>3</sup>The Chinese University of Hong Kong,</span><br> <span class="author-block"><sup>4</sup>Shanghai AI Laboratory,</span>
+              <span class="author-block"><sup>5</sup>University of Macau,</span> <span class="author-block"><sup>6</sup>Texas A&M University,</span> <span class="author-block"><sup>7</sup>Amazon AI</span> </div>
+		  <div class="is-size-6 publication-authors">
+              <span class="author-block"><sup>*</sup>Equally contributing first authors. <sup>&dagger;</sup>Corresponding authors.</span>
+            </div>
           <div class="column has-text-centered">
             <div class="publication-links">
               <!-- PDF Link. -->
@@ -457,17 +460,56 @@ images. Other rows represent the outcomes of Alpha-CLIP with highlighted regions
           <div class="column is-full-width">
             <div class="content has-text-justified">
               <p>
-			  这里换成表格，or可以加一个cls测试pipeline； 以及rec任务 
-			  <br>
-                We delineate the process of utilizing the seed captions to train a general captioner (Share-Captioner)
-                and then employing this captioner to generate <b>1.2M high-quality captions</b> for pre-training usage.
+			  Alpha-CLIP boosts the capability of region-based recognition for original CLIP. We set alpha channel input to all one according to areas of interest to obtain precise object categories in complex images. The illustration are as follows.
                 <centering>
                   <div style="text-align: center;">
-                    <img id="teaser" width="100%" src="static/images/pipeline.png">     
+                    <img id="teaser" width="80%" src="static/images/recog_demo.png">     
                   </div>
               </p>
             </div>
-            </b></font>
+            </b></font><br>
+			<div style="text-align: center;">
+				<table border="1" cellspacing="0" style="width: 92%; border-collapse: collapse; text-align: center; margin: 0 auto;">
+				<style>
+					td {
+					  text-align: center; /* 居中水平 */
+					  vertical-align: middle; /* 居中垂直 */
+					}
+				  </style>
+					<caption><strong>Zero-shot classification on ImageNet-S with different alpha map levels.</strong> Alpha-CLIP is comparable to the original CLIP when the foreground mask is not available, and further boosts the performance with rectangular box or mask alpha maps.</caption>
+					<thead>
+						<tr>
+							<th rowspan="1">Model</th>
+							<th rowspan="1">Alpha Map</th>
+							<th>Top-1</th>
+							<th>Top-5</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>CLIP</td>
+							<td>-</td>
+							<td>73.48</td>
+							<td>91.60</td>
+						</tr>
+						<tr>
+							<td rowspan="3"><br>Alpha-CLIP</td>
+							<td style="background-color: #e6e6ff;">whole image</td>
+							<td style="background-color: #e6e6ff;">73.37</td>
+							<td style="background-color: #e6e6ff;">91.75</td>
+						</tr>
+						<tr style="background-color: #ccccff;">
+							<td>rectangular box</td>
+							<td>75.62</td>
+							<td>93.34</td>
+						</tr>
+						<tr style="background-color: #b3b3ff;">
+							<td>mask</td>
+							<td>77.41</td>
+							<td>94.45</td>
+						</tr>
+					</tbody>
+				</table>
           </div>
         </div>
       </div>
@@ -494,6 +536,8 @@ in red. This visualization verifies that Alpha-CLIP <b>pays more attention to th
               </p>
             </div>
             </b></font>
+			</div>
+			
           </div>
         </div>
       </div>
@@ -519,6 +563,7 @@ in red. This visualization verifies that Alpha-CLIP <b>pays more attention to th
 
 <footer class="footer">
   <div class="container">
+  	<!-- link
     <div class="content has-text-centered">
       <a class="icon-link"
          href="https://arxiv.org/pdf/2210.04150.pdf">
@@ -528,6 +573,7 @@ in red. This visualization verifies that Alpha-CLIP <b>pays more attention to th
         <i class="fab fa-github"></i>
       </a>
     </div>
+	-->
     <div class="columns is-centered">
       <div class="column is-8">
         <div class="content">
