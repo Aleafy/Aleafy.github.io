@@ -128,9 +128,9 @@
       <div class="columns is-centered">
         <div class="column has-text-centered">
           <h1 class="title is-1 publication-title"><img id="logo" width="5%" src="static/images/icon.png"> <span class="rainbow-text">Alpha-CLIP</span>: A CLIP Model Focusing on Wherever You Want</h1>
-          <div class="is-size-5 publication-authors"> <span class="author-block"> <a href="https://github.com/SunzeY">Zeyi Sun</a><sup>*1,4</sup>,</span> <span class="author-block"> <a href="https://github.com/Aleafy">Ye Fang</a><sup>*2,4</sup>,</span> <span class="author-block"> <a href="https://wutong16.github.io/">Tong Wu</a><sup>3,4</sup>, </span> <span class="author-block"> <a href="https://panzhang0212.github.io/">Pan Zhang</a><sup>4</sup>, </span> </div> <div class="is-size-5 publication-authors"> <span class="author-block"> <a href="https://yuhangzang.github.io/">Yuhang Zang</a><sup>4</sup>, </span> <span class="author-block"> <a href="https://aimerykong.github.io/">Shu Kong</a><sup>5,6</sup>, </span> <span class="author-block"> <a href="http://yjxiong.me/">Yuanjun Xiong</a><sup>7</sup>, </span> <span class="author-block"> <a href="http://dahua.site/">Dahua Lin</a><sup>3,4</sup>, </span> <span class="author-block"> <a href="https://myownskyw7.github.io/">Jiaqi Wang</a><sup>&dagger;4</sup> </span> </div>
+          <div class="is-size-5 publication-authors"> <span class="author-block"> <a href="https://github.com/SunzeY">Zeyi Sun</a><sup>*1,4</sup>,</span> <span class="author-block"> <a href="https://github.com/Aleafy">Ye Fang</a><sup>*2,4</sup>,</span> <span class="author-block"> <a href="https://wutong16.github.io/">Tong Wu</a><sup>3,4</sup>, </span> <span class="author-block"> <a href="https://panzhang0212.github.io/">Pan Zhang</a><sup>4</sup>, </span> <span class="author-block"> <a href="https://yuhangzang.github.io/">Yuhang Zang</a><sup>4</sup>, </div> <div class="is-size-5 publication-authors"> </span> <span class="author-block"> <a href="https://aimerykong.github.io/">Shu Kong</a><sup>5</sup>, </span> <span class="author-block"> <a href="http://yjxiong.me/">Yuanjun Xiong</a><sup>1,6</sup>, </span> <span class="author-block"> <a href="http://dahua.site/">Dahua Lin</a><sup>3,4</sup>, </span> <span class="author-block"> <a href="https://myownskyw7.github.io/">Jiaqi Wang</a><sup>&dagger;4</sup> </span> </div>
           <div class="is-size-5 publication-authors"> <span class="author-block"><sup>1</sup>Shanghai Jiao Tong University,</span> <span class="author-block"><sup>2</sup>Fudan University,</span>  <span class="author-block"><sup>3</sup>The Chinese University of Hong Kong,</span><br> <span class="author-block"><sup>4</sup>Shanghai AI Laboratory,</span>
-              <span class="author-block"><sup>5</sup>University of Macau,</span> <span class="author-block"><sup>6</sup>Texas A&M University,</span> <span class="author-block"><sup>7</sup>Amazon AI</span> </div>
+              <span class="author-block"><sup>5</sup>University of Macau,</span> <span class="author-block"><sup>6</sup>MThreads, Inc.</span> </div>
 		  <div class="is-size-6 publication-authors">
               <span class="author-block"><sup>*</sup>Equally contributing first authors. <sup>&dagger;</sup>Corresponding authors.</span>
             </div>
@@ -140,14 +140,14 @@
               <span class="link-block"> <a href="https://arxiv.org/abs/2011.12948"
                    class="external-link button is-normal is-rounded is-dark"> <span class="icon"> <i class="ai ai-arxiv"></i> </span> <span>arXiv</span> </a> </span>
               <!-- Video Link. -->
-              <span class="link-block"> <a href="https://www.youtube.com/watch?v=MrKrnHhk8IA"
+              <span class="link-block"> <a href="https://www.youtube.com/watch?v=UAUJNFJSbiI"
                    class="external-link button is-normal is-rounded is-dark"> <span class="icon"> <i class="fab fa-youtube"></i> </span> <span>Video</span> </a> </span>
               <!-- Code Link. -->
               <span class="link-block"> <a href="https://github.com/google/nerfies"
                    class="external-link button is-normal is-rounded is-dark"> <span class="icon"> <i class="fab fa-github"></i> </span> <span>Code</span> </a> </span>
               <!-- Dataset Link. -->
-              <span class="link-block"> <a href="https://github.com/google/nerfies/releases/tag/0.1"
-                   class="external-link button is-normal is-rounded is-dark"> <span class="icon"> <i class="far fa-images"></i> </span> <span>Dataset</span></a></span></div>
+              <span class="link-block"> <a href="https://huggingface.co/spaces/Zery/Alpha_CLIP_ImgVar"
+                   class="external-link button is-normal is-rounded is-dark"> <span class="icon"> <i class="far fa-images"></i> </span> <span>Demo</span></a></span></div>
           	 </div>
        	   </div>
         </div>
@@ -191,7 +191,7 @@
       <div class="column is-six-fifths">
         <h2 class="title is-3">Video</h2>
         <div class="publication-video">
-          <iframe src="https://www.youtube.com/embed/MrKrnHhk8IA?rel=0&amp;showinfo=0"
+          <iframe src="https://www.youtube.com/embed/UAUJNFJSbiI?rel=0&amp;showinfo=0"
                   frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
         </div>
       </div>
@@ -248,10 +248,11 @@ Focusing on a specified ground-truth region leads to a 4.1% increase in top-1 ac
       </div>
     </section>
 
-<section class="section" id="Alpha-CLIP pipeline">
+
+<section class="section" id="Alpha-CLIP">
       <div class="columns is-centered has-text-centered">
         <div class="column is-six-fifths">
-          <h2 class="title is-3"> Alpha-CLIP Pipeline</h2>
+          <h2 class="title is-3"> Alpha-CLIP in Image Recognition</h2>
         </div>
       </div>
       <div class="container is-max-desktop">
@@ -259,19 +260,61 @@ Focusing on a specified ground-truth region leads to a 4.1% increase in top-1 ac
           <div class="column is-full-width">
             <div class="content has-text-justified">
               <p>
-                The pipeline of our <b>data generation method</b> and <b>model architecture</b>. (a) Our method generates millions of RGBA region-text pairs. (b) Alpha-CLIP modifies the CLIP image encoder to take an additional alpha channel along with RGB. We first generate millions of RGBA region-text data from grounding and classification datasets. Using our generated data, we then train our Alpha-CLIP with additional Alpha-channel inputs.
+			  Alpha-CLIP boosts the capability of region-based recognition for original CLIP. We set alpha channel input to all one according to areas of interest to obtain precise object categories in complex images. The illustration are as follows.
                 <centering>
                   <div style="text-align: center;">
-                    <img id="teaser" width="100%" src="static/images/pipeline.png">     
+                    <img id="teaser" width="80%" src="static/images/recog_demo.png">     
                   </div>
               </p>
             </div>
-            </b></font>
+            </b></font><br>
+			<p> We test both original CLIP and Alpha-CLIP's recognition ability with different alpha-map levels on ImageNet. The results are as follows.</p>
+			<div style="text-align: center;">
+				<table border="1" cellspacing="0" style="width: 92%; border-collapse: collapse; text-align: center; margin: 0 auto;">
+				<style>
+					td {
+					  text-align: center; /* 居中水平 */
+					  vertical-align: middle; /* 居中垂直 */
+					}
+				  </style>
+					<caption><strong>Zero-shot classification on ImageNet-S with different alpha map levels.</strong> Alpha-CLIP is comparable to the original CLIP when the foreground mask is not available, and further boosts the performance with rectangular box or mask alpha maps.</caption>
+					<thead>
+						<tr>
+							<th rowspan="1">Model</th>
+							<th rowspan="1">Alpha Map</th>
+							<th>Top-1</th>
+							<th>Top-5</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>CLIP</td>
+							<td>-</td>
+							<td>73.48</td>
+							<td>91.60</td>
+						</tr>
+						<tr>
+							<td rowspan="3"><br>Alpha-CLIP</td>
+							<td style="background-color: #e6e6ff;">whole image</td>
+							<td style="background-color: #e6e6ff;">73.37</td>
+							<td style="background-color: #e6e6ff;">91.75</td>
+						</tr>
+						<tr style="background-color: #ccccff;">
+							<td>rectangular box</td>
+							<td>75.62</td>
+							<td>93.34</td>
+						</tr>
+						<tr style="background-color: #b3b3ff;">
+							<td>mask</td>
+							<td>77.41</td>
+							<td>94.45</td>
+						</tr>
+					</tbody>
+				</table>
           </div>
         </div>
       </div>
     </section>
-
 
 <section class="section" id="Alpha-CLIP">
       <div class="columns is-centered has-text-centered">
@@ -449,10 +492,10 @@ images. Other rows represent the outcomes of Alpha-CLIP with highlighted regions
     </section>
 
 
-<section class="section" id="Alpha-CLIP">
+<section class="section" id="Alpha-CLIP pipeline">
       <div class="columns is-centered has-text-centered">
         <div class="column is-six-fifths">
-          <h2 class="title is-3"> Alpha-CLIP in Image Recognition</h2>
+          <h2 class="title is-3"> Alpha-CLIP Pipeline</h2>
         </div>
       </div>
       <div class="container is-max-desktop">
@@ -460,60 +503,19 @@ images. Other rows represent the outcomes of Alpha-CLIP with highlighted regions
           <div class="column is-full-width">
             <div class="content has-text-justified">
               <p>
-			  Alpha-CLIP boosts the capability of region-based recognition for original CLIP. We set alpha channel input to all one according to areas of interest to obtain precise object categories in complex images. The illustration are as follows.
+                The pipeline of our <b>data generation method</b> and <b>model architecture</b>. (a) Our method generates millions of RGBA region-text pairs. (b) Alpha-CLIP modifies the CLIP image encoder to take an additional alpha channel along with RGB. We first generate millions of RGBA region-text data from grounding and classification datasets. Using our generated data, we then train our Alpha-CLIP with additional Alpha-channel inputs.
                 <centering>
                   <div style="text-align: center;">
-                    <img id="teaser" width="80%" src="static/images/recog_demo.png">     
+                    <img id="teaser" width="100%" src="static/images/pipeline.png">     
                   </div>
               </p>
             </div>
-            </b></font><br>
-			<div style="text-align: center;">
-				<table border="1" cellspacing="0" style="width: 92%; border-collapse: collapse; text-align: center; margin: 0 auto;">
-				<style>
-					td {
-					  text-align: center; /* 居中水平 */
-					  vertical-align: middle; /* 居中垂直 */
-					}
-				  </style>
-					<caption><strong>Zero-shot classification on ImageNet-S with different alpha map levels.</strong> Alpha-CLIP is comparable to the original CLIP when the foreground mask is not available, and further boosts the performance with rectangular box or mask alpha maps.</caption>
-					<thead>
-						<tr>
-							<th rowspan="1">Model</th>
-							<th rowspan="1">Alpha Map</th>
-							<th>Top-1</th>
-							<th>Top-5</th>
-						</tr>
-					</thead>
-					<tbody>
-						<tr>
-							<td>CLIP</td>
-							<td>-</td>
-							<td>73.48</td>
-							<td>91.60</td>
-						</tr>
-						<tr>
-							<td rowspan="3"><br>Alpha-CLIP</td>
-							<td style="background-color: #e6e6ff;">whole image</td>
-							<td style="background-color: #e6e6ff;">73.37</td>
-							<td style="background-color: #e6e6ff;">91.75</td>
-						</tr>
-						<tr style="background-color: #ccccff;">
-							<td>rectangular box</td>
-							<td>75.62</td>
-							<td>93.34</td>
-						</tr>
-						<tr style="background-color: #b3b3ff;">
-							<td>mask</td>
-							<td>77.41</td>
-							<td>94.45</td>
-						</tr>
-					</tbody>
-				</table>
+            </b></font>
           </div>
         </div>
       </div>
     </section>
+
 
 <section class="section" id="Alpha-CLIP Attn">
       <div class="columns is-centered has-text-centered">
