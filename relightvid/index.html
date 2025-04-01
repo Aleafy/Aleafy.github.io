@@ -1,0 +1,853 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <title>RelightVid</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
+
+
+  <!-- Owl Carousel CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- jQuery -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+  <!-- Owl Carousel JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+
+  <script type="text/javascript"
+  id="MathJax-script"
+  async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+</script>
+
+  <script>
+    $(document).ready(function(){
+      function initializeCarousel(carouselId, indicatorId, autoplayTimeout) {
+        var totalItems = $(carouselId + ' .item').length;
+        var $indicator = $(indicatorId);
+        var playCount = 0;
+        var timesCycled = 0;
+
+        var owl = $(carouselId).owlCarousel({
+          items: 1,
+          loop: true,
+          margin: 10,
+          nav: true,
+          autoplayHoverPause: false,
+          navText: [
+            "<span class='custom-owl-nav custom-owl-prev'>&#10094;</span>",
+            "<span class='custom-owl-nav custom-owl-next'>&#10095;</span>"
+          ],
+          responsive: {
+            0: { items: 1, nav: true, loop: true  },
+            600: { items: 1, nav: true, loop: true  },
+            1000: { items: 1, nav: true, loop: true }
+          },
+          onInitialized: updateIndicator,
+          onTranslated: function(event) {
+            updateIndicator(event);
+            playCount++;
+            if (playCount >= totalItems) {
+              playCount = 0;
+              timesCycled++;
+              if (timesCycled >= 3) {
+                $(carouselId).trigger('stop.owl.autoplay');
+              }
+            }
+          }
+        });
+
+        // Add event listeners to navigation buttons to reset autoplay
+        $(carouselId).on('click', '.owl-prev, .owl-next', function() {
+          owl.trigger('stop.owl.autoplay');
+          // owl.trigger('play.owl.autoplay', [autoplayTimeout]);
+        });
+
+        function updateIndicator(event) {
+          var currentIndex = event.item.index - event.relatedTarget._clones.length / 2 + 1;
+          if (currentIndex > totalItems) {
+            currentIndex = currentIndex - totalItems;
+          }
+          $indicator.text(currentIndex + '/' + totalItems);
+        }
+      }
+
+      initializeCarousel('#carousel-demo1', '#carousel-indicator1', 20000);
+      initializeCarousel('#carousel-demo2', '#carousel-indicator2', 20000);
+      initializeCarousel('#carousel-demo3', '#carousel-indicator3', 20000);
+      initializeCarousel('#carousel-demo4', '#carousel-indicator4', 20000);
+      initializeCarousel('#carousel-demo5', '#carousel-indicator5', 20000);
+      initializeCarousel('#carousel-demo6', '#carousel-indicator6', 20000);
+    });
+  </script>
+  
+  <style>
+    .nav-button {
+      color: #333;
+      background-color: rgba(255, 255, 255, 0.7);
+      border-radius: 50%;
+      padding: 0.5rem;
+      margin: 0 1rem;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .custom-owl-nav {
+  font-size: 1.2rem !important;       /* 控制箭头大小 */
+  width: 40px !important;
+  height: 40px !important;
+  line-height: 60px !important;
+  background-color: #ffffff !important;
+  color: #333 !important;
+  text-align: center !important;
+  border-radius: 50% !important;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15) !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  transition: all 0.2s ease !important;
+  margin: 0 15px !important;
+  cursor: pointer !important;
+  border: none !important;
+  user-select: none !important;
+}
+
+.custom-owl-nav:hover {
+  transform: scale(1.1) !important;
+  background-color: #f2f2f2 !important;
+}
+
+.owl-prev, .owl-next {
+  position: absolute;
+  bottom: -3.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1000;
+}
+
+.owl-prev {
+  margin-left: -3rem;
+}
+
+.owl-next {
+  margin-left: 3rem;
+}
+
+/* .caption {
+  font-size: 12px;
+  line-height: 1;
+  margin-top: 1px;
+  margin-bottom: 22px;
+  color: #333;
+  max-width: 100%;
+  font-weight: normal;
+} */
+.caption {
+  font-size: 13px;
+  line-height: 1;
+  margin-top: 1px;
+  margin-bottom: 22px;
+  color: #333;
+  max-width: 100%;
+  font-weight: normal;
+  font-style: italic;
+}
+
+    /* .owl-prev, .owl-next {
+  position: absolute;
+  bottom: -3.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1000;
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 50%;
+  width: 2.5rem;
+  height: 2.5rem;
+  font-size: 1.4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.owl-prev {
+  margin-left: -2.8rem;
+}
+.owl-next {
+  margin-left: 2.8rem;
+}
+ */
+
+  </style>
+
+
+  <style>
+    body {
+      padding: 2em;
+      font-family: sans-serif;
+      background-color: #f7f7f7;
+      color: #333;
+      margin: 0;
+    }
+    .main-container {
+      max-width: 1560px;         /* 控制内容区宽度，数值可以根据需求调整 */
+      margin: 2em auto;         /* 上下左右外边距，形成白边 */
+      padding: 1.5em;           /* 内容区内边距，让内部不贴边 */
+      background: white;        /* 白色背景让展示区域醒目 */
+      border-radius: 1em;       /* 圆角好看 */
+      box-shadow: 0 0 2em rgba(0, 0, 0, 0.1); /* 阴影有立体感 */
+      box-sizing: border-box;
+    }
+
+    .hero {
+      text-align: center;
+      padding: 2.5em 2.5em;
+      background-color: #333333;
+      color: white;
+      border-radius: 1em;
+      margin-bottom: 2em;
+      font-family: sans-serif;
+    }
+
+    .hero h1 {
+      font-size: 2.5em;
+      margin: 0;
+      font-weight: bold;
+      
+    }
+
+    .hero p {
+      font-size: 1.2em;
+      margin: 0.5em 0 0;
+    }
+
+    iframe {
+      border-radius: 0.5em;
+      width: 40em;
+      height: 40em;
+      border: none;
+      box-shadow: 0 0 1em 0em rgba(0, 0, 0, 0.15);
+    }
+
+    @media (max-width: 768px) {
+      iframe {
+        width: 100%;
+        height: 30em;
+      }
+    }
+
+    a,
+    a:link {
+      color: #777;
+      text-decoration: none;
+    }
+
+    a:hover {
+      color: #333;
+    }
+
+    /* Styles for the instruction icons and text */
+    .instructions {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 2em;
+      text-align: center;
+      padding: 1em;
+    }
+
+    .instruction-item {
+      display: flex;
+      align-items: center;
+      gap: 0.5em;
+      font-size: 1.5em;
+    }
+
+    .instruction-item img {
+      width: 36px;
+      height: 36px;
+    }
+
+    .teaser {
+      text-align: center;
+      margin-bottom: 3em;
+      padding: 2em;
+      background-color: #ffffff;
+      border-radius: 1em;
+      box-shadow: 0 0 1em 0em rgba(0, 0, 0, 0.1);
+    }
+
+    .teaser-title {
+      font-size: 2em;
+      font-weight: bold;
+      margin-bottom: 0.5em;
+    }
+
+    .teaser-description {
+      font-size: 1.2em;
+      margin-bottom: 2em;
+      max-width: 1150px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .teaser-visuals {
+      display: flex;
+      justify-content: center;
+      gap: 2em;
+      flex-wrap: wrap;
+    }
+
+    /* .teaser-visuals-text {
+      display: flex;
+      justify-content: center;
+      gap: 2em;
+      flex-wrap: wrap;
+    } */
+
+    .teaser-visual {
+      text-align: center;
+    }
+
+
+    .teaser-visual img {
+      width: 30em;
+      /* height: 17em; */
+      border-radius: 0.5em;
+      box-shadow: 0 0 1em 0em rgba(0, 0, 0, 0.15);
+    }
+
+    .teaser-visual p {
+      margin-top: 0.5em;
+      font-weight: bold;
+    }
+
+    .publication-authors {
+      font-family: 'Google Sans', sans-serif;
+    }
+
+    .author-block {
+      font-size: 20px;
+      color: white;color: white;
+      padding: 0 5px;
+      display: inline-block;
+    }
+
+    .eql-cntrb{
+      font-size: 19px;
+      color: rgba(255, 255, 255, 0.865);
+    }
+
+    sup{
+      font-size: small;
+    }
+  </style>
+  <title>RelightVid</title>
+</head>
+
+<body>
+  <div class="main-container">
+  <!-- Hero section with title and description -->
+  <div class="hero">
+    <h1>RelightVid: Temporal-Consistent Diffusion Model for Video Relighting <br></h1>
+
+    <br><br>
+    <div class="publication-authors">
+      <span class="author-block"><a href="https://github.com/Aleafy" target="_blank" style="color: inherit;">Ye Fang<small><sup>1,2*</sup></small></a></span>&ensp;
+      <span class="author-block"><a href="https://github.com/SunzeY" target="_blank" style="color: inherit;">Zeyi Sun<sup>1,3*</sup></a></span>&ensp;
+      <span class="author-block"><a href="https://zhanghe3z.github.io/" target="_blank" style="color: inherit;">Shangzhan Zhang<sup>4</sup></a></span>&ensp;
+      <span class="author-block"><a href="https://wutong16.github.io/" target="_blank" style="color: inherit;">Tong Wu<small><sup>5</sup></small></a></span>&ensp;
+      <span class="author-block"><a href="https://justimyhxu.github.io/" target="_blank" style="color: inherit;">Yinghao Xu<small><sup>5</sup></small></a></span>&ensp;
+      <span class="author-block"><a href="https://panzhang0212.github.io/" target="_blank" style="color: inherit;">Pan Zhang<small><sup>1</sup></small></a></span>&ensp;
+      <span class="author-block"><a href="https://myownskyw7.github.io/" target="_blank" style="color: inherit;">Jiaqi Wang<small><sup>1</sup></small></a></span>&ensp;
+      <span class="author-block"><a href="https://www.duygu-ceylan.com/" target="_blank" style="color: inherit;">Gordon Wetzstein<small><sup>5</sup></small></a></span>&ensp;
+      <span class="author-block"><a href="https://www.duygu-ceylan.com/" target="_blank" style="color: inherit;">Dahua Lin<small><sup>1,6</sup></small></a></span>
+
+      <br><br>
+      <span class="eql-cntrb"><sup>1</sup>Shanghai AI Laboratory</span>
+      &emsp;&emsp;&emsp;
+      <span class="eql-cntrb"><sup>2</sup>Fudan University</span>
+      &emsp;&emsp;&emsp;
+      <span class="eql-cntrb"><sup>3</sup>Shanghai Jiao Tong University</span>
+      &emsp;&emsp;&emsp;&emsp;
+      <span class="eql-cntrb"><sup>4</sup>Zhejiang University</span>
+      &emsp;&emsp;&emsp;&emsp;<br> 
+      <span class="eql-cntrb"><sup>5</sup>Stanford University</span>
+      &emsp;&emsp;&emsp;&emsp;
+      <span class="eql-cntrb"><sup>6</sup>The Chinese University of Hong Kong</span>
+      &emsp;&emsp;&emsp;&emsp;
+    </div>
+
+    <br>
+     <div>
+      <span class="author-block" style="font-size:1em; color: rgba(255, 255, 255, 0.865)">* Equal Contribution</span>
+    </div>
+    
+    <!-- <div>
+      <span class="author-block" style="font-size:xx-large">CVPR 2025</span>
+    </div>
+     -->
+    <br>
+    <div class="publication-authors">
+      <a href="https://arxiv.org/abs/2501.16330" target="_blank" style="text-decoration: none;">
+        <button style="background-color: rgba(154, 156, 156, 0.2); color: white; border: 2px solid white; padding: 10px 20px; font-size: 18px; border-radius: 5px; cursor: pointer;">
+          <i class="fas fa-book" style="margin-right: 8px;"></i>Paper
+      </button>
+    </a> &ensp;
+    <a href="https://github.com/Aleafy/RelightVid" target="_blank" style="text-decoration: none;">
+      <button style="background-color: rgba(154, 156, 156, 0.2); color: white; border: 2px solid white; padding: 10px 20px; font-size: 18px; border-radius: 5px; cursor: pointer;">
+      <i class="fab fa-github" style="margin-right: 8px;"></i>Code
+    </button>
+    </a>&ensp;
+      <a href="https://huggingface.co/spaces/aleafy/RelightVid" target="_blank" style="text-decoration: none;">
+        <button style="background-color: rgba(154, 156, 156, 0.2); color: white; border: 2px solid white; padding: 10px 20px; font-size: 18px; border-radius: 5px; cursor: pointer;">
+          <i class="fas fa-wand-magic-sparkles" style="margin-right: 8px;"></i>Demo
+      </button>
+    </a>&ensp;
+    <a href="https://aleafy.github.io/RelightVid" target="_blank" style="text-decoration: none;">
+      <button style="background-color: rgba(154, 156, 156, 0.2); color: white; border: 2px solid white; padding: 10px 20px; font-size: 18px; border-radius: 5px; cursor: pointer;">
+        <i class="fas fa-database" style="margin-right: 8px;"></i>Dataset (Coming Soon)
+    </button>
+  </a>
+
+
+    </div>
+      
+    
+
+  </div>
+
+  <!-- Paper Video Section -->
+  <div class="teaser">
+    <div class="teaser-title">Video</div>
+    <div style="display: flex; justify-content: center;">
+      <iframe src="https://www.youtube.com/embed/8yTOgCgMyIM?rel=0&amp;showinfo=0"
+              frameborder="0" allow="autoplay; encrypted-media" allowfullscreen
+              style="width: 100%; max-width: 72em; height: 40em; border-radius: 0.5em; box-shadow: 0 0 1em rgba(0, 0, 0, 0.15);">
+      </iframe>
+    </div>
+    <br>
+  </div>
+  
+  <!-- <h3 class="title is-4">Virtual Try-on</h3>
+        <div class="content has-text-justified">
+          <p>Using I2VEdit, you can edit wearable objects in source videos.</p>
+        </div>
+
+        <div class="container">
+            <div id="carousel-demo3" class="owl-carousel">
+                <div class="item item-steve">
+                    <video poster="index.html" id="steve" autoplay controls muted loop playsinline style="width: 100%;">
+                      <source src="static\gifs\text_relight\4_iclight.mp4" type="video/mp4">
+                    </video>
+                  </div>
+                  <div class="item item-chair-tp">
+                    <video poster="index.html" id="chair-tp" autoplay controls muted loop playsinline style="width: 100%;">
+                      <source src="static\gifs\text_relight\4_iclight.mp4" type="video/mp4">
+                    </video>
+                  </div>
+                  <div class="item item-blueshirt">
+                    <video poster="index.html" id="blueshirt" autoplay controls muted loop playsinline style="width: 100%;">
+                      <source src="static\gifs\text_relight\4_iclight.mp4" type="video/mp4">
+                    </video>
+                  </div>
+                  <div class="item item-blueshirt">
+                    <video poster="index.html" id="blueshirt" autoplay controls muted loop playsinline style="width: 100%;">
+                      <source src="static\gifs\text_relight\4_iclight.mp4" type="video/mp4">
+                    </video>
+                  </div>            
+              
+            </div>
+        </div> -->
+
+  
+  <!-- Teaser results section -->
+  <div class="teaser">
+    <div class="teaser-title">Text-Conditioned Video Relighting</div>
+    <!-- <p class="teaser-description">
+      We showcase <b>RelightVid</b>, a text-driven video relighting model that edits illumination based on natural language prompts.  
+      Our method produces consistent and realistic lighting across frames, supporting both <b>full-scene relighting</b> and <b>foreground-preserved relighting</b>.
+    </p> -->
+    <section>
+      <!-- <h2>Text-Conditioned Video Relighting</h2> -->
+      <p>
+        <strong>RelightVid</strong> relights the same input video under different text-based illumination prompts, offering fine-grained and consistent scene editing.
+      </p>
+      <p>
+        <span style="font-weight:600;">🔆 Full-Scene Relighting:</span> Foreground and background are jointly relit to match the text prompt.
+      </p>
+      <p>
+        <span style="font-weight:600;">🎭 Foreground-Preserved Relighting:</span> Background is inpainted while only the foreground is relit based on the prompt.
+      </p>
+        <!-- <strong>Left:</strong> Original &nbsp; <strong>Middle:</strong> Prompt A &nbsp; <strong>Right:</strong> Prompt B -->
+        <br>
+      </section>
+    
+
+      <div id="carousel-demo4" class="owl-carousel">
+        <div class="item">
+          <div class="teaser-visuals">
+            <div class="teaser-visual">
+              <p style="font-size: larger;">Input Video</p>
+              <video src="static\gifs\text_relight\5_iclight.mp4" muted autoplay loop style="width: 100%; max-width: 20em; border-radius: 0.3em; box-shadow: 0 0 1em 0em rgba(0, 0, 0, 0.15);"></video>
+              
+            </div>
+            <div class="teaser-visual">
+              <p style="font-size: larger;">Relighted Video A</p>
+              <video src="static\gifs\text_relight\5_sunlight filtering through trees, dappled light_iclight.mp4" muted autoplay loop style="width: 100%; max-width: 20em; border-radius: 0.3em; box-shadow: 0 0 1em 0em rgba(0, 0, 0, 0.15);"></video>
+              <p class="caption">sunlight filtering through trees, dappled light</p>
+              <!-- <p style="font-size: small; margin-top: 0.5em;">sunlight filtering through trees, dappled light</p> -->
+            </div>
+            <div class="teaser-visual">
+              <p style="font-size: larger;">Relighted Video B</p>
+              <video src="static\gifs\text_relight\5_natural lighting_iclight.mp4" muted autoplay loop style="width: 100%; max-width: 20em; border-radius: 0.3em; box-shadow: 0 0 1em 0em rgba(0, 0, 0, 0.15);"></video>
+              <p class="caption">natural lighting</p>
+              <!-- <p style="font-size: medium; margin-top: 0.5em;">natural lighting</p> -->
+            </div>
+          </div>
+          <!-- <br>  -->
+
+
+          <div class="teaser-visuals">
+            <div class="teaser-visual">
+              <video src="static\gifs\text_relight\7_iclight.mp4" muted autoplay loop style="width: 100%; max-width: 20em; border-radius: 0.3em; box-shadow: 0 0 1em 0em rgba(0, 0, 0, 0.15);"></video>
+            </div>
+            <div class="teaser-visual">
+              <video src="static\gifs\text_relight\7_sunlight filtering through trees, dappled light_iclight.mp4" muted autoplay loop style="width: 100%; max-width: 20em; border-radius: 0.3em; box-shadow: 0 0 1em 0em rgba(0, 0, 0, 0.15);"></video>
+              <p class="caption">sunlight filtering through trees, dappled light</p>
+            </div>
+            <div class="teaser-visual">
+              <video src="static\gifs\text_relight\7_natural lighting_iclight.mp4" muted autoplay loop style="width: 100%; max-width: 20em; border-radius: 0.3em; box-shadow: 0 0 1em 0em rgba(0, 0, 0, 0.15);"></video>
+              <p class="caption">natural lighting</p>
+            </div>
+          </div>
+          
+          <div class="teaser-visuals">
+            <div class="teaser-visual">
+              <video src="static\gifs\text_relight\14_iclight.mp4" muted autoplay loop style="width: 100%; max-width: 20em; border-radius: 0.3em; box-shadow: 0 0 1em 0em rgba(0, 0, 0, 0.15);"></video>
+            </div>
+            <div class="teaser-visual">
+              <video src="static\gifs\text_relight\14_overhead softbox lighting, clean shadows_iclight.mp4" muted autoplay loop style="width: 100%; max-width: 20em; border-radius: 0.3em; box-shadow: 0 0 1em 0em rgba(0, 0, 0, 0.15);"></video>
+              <p class="caption">overhead softbox lighting, clean shadows</p>
+            </div>
+            <div class="teaser-visual">
+              <video src="static\gifs\text_relight\14_sunset glow, warm tones_iclight.mp4" muted autoplay loop style="width: 100%; max-width: 20em; border-radius: 0.3em; box-shadow: 0 0 1em 0em rgba(0, 0, 0, 0.15);"></video>
+              <p class="caption">glowing lava, fiery illumination</p>
+            </div>
+          </div>
+          
+          <div class="teaser-visuals">
+            <div class="teaser-visual">
+              <video src="static\gifs\text_relight\17_iclight.mp4" muted autoplay loop style="width: 100%; max-width: 20em; border-radius: 0.3em; box-shadow: 0 0 1em 0em rgba(0, 0, 0, 0.15);"></video>
+            </div>
+            <div class="teaser-visual">
+              <video src="static\gifs\text_relight\17_harsh industrial lighting, gritty_iclight.mp4" muted autoplay loop style="width: 100%; max-width: 20em; border-radius: 0.3em; box-shadow: 0 0 1em 0em rgba(0, 0, 0, 0.15);"></video>
+              <p class="caption">harsh industrial lighting, gritty</p>
+            </div>
+            <div class="teaser-visual">
+              <video src="static\gifs\text_relight\17_soft morning light, golden hour_iclight.mp4" muted autoplay loop style="width: 100%; max-width: 20em; border-radius: 0.3em; box-shadow: 0 0 1em 0em rgba(0, 0, 0, 0.15);"></video>
+              <p class="caption">soft morning light, golden hour</p>
+            </div>
+          </div>
+          <br>
+        </div>
+        
+        <div class="item">
+          <div class="teaser-visuals">
+            <div class="teaser-visual">
+              <p style="font-size: larger;">Input Video</p>
+              <!-- <video src="static\gifs\text_inpaint\output_video1.mp4" muted autoplay loop style="width: 100%; max-width: 20em; border-radius: 0.3em; box-shadow: 0 0 1em 0em rgba(0, 0, 0, 0.15);"></video> -->
+              <img src="static\gifs\text_inpaint\car-turn3.gif" style="width: 100%; max-width: 20em; border-radius: 0.3em; box-shadow: 0 0 1em 0em rgba(0, 0, 0, 0.15);" />
+            </div>
+            <div class="teaser-visual">
+              <p style="font-size: larger;">Relighted Video A</p>
+              <img src="static\gifs\text_inpaint\car-turn3_frames.gif" style="width: 100%; max-width: 20em; border-radius: 0.3em; box-shadow: 0 0 1em 0em rgba(0, 0, 0, 0.15);" />
+              <p class="caption">On a rainy day.</p>
+            </div>
+            <div class="teaser-visual">
+              <p style="font-size: larger;">Relighted Video B</p>
+              <img src="static\gifs\text_inpaint\car-turn3_frames3.gif" style="width: 100%; max-width: 20em; border-radius: 0.3em; box-shadow: 0 0 1em 0em rgba(0, 0, 0, 0.15);" />
+              <p class="caption">In the harsh, cold light of noon.</p>
+            </div>
+          </div>
+      
+          <div class="teaser-visuals">
+            <div class="teaser-visual">
+              <img src="static\gifs\text_inpaint\cows1_fg.gif" muted autoplay loop style="width: 100%; max-width: 20em; border-radius: 0.3em; box-shadow: 0 0 1em 0em rgba(0, 0, 0, 0.15);">
+            </div>
+            <div class="teaser-visual">
+              <img src="static\gifs\text_inpaint\cows12.gif" muted autoplay loop style="width: 100%; max-width: 20em; border-radius: 0.3em; box-shadow: 0 0 1em 0em rgba(0, 0, 0, 0.15);">
+              <p class="caption">On a rainy day.</p>
+            </div>
+            <div class="teaser-visual">
+              <img src="static\gifs\text_inpaint\cows1.gif" muted autoplay loop style="width: 100%; max-width: 20em; border-radius: 0.3em; box-shadow: 0 0 1em 0em rgba(0, 0, 0, 0.15);">
+              <p class="caption">At night with moonlight.</p>
+            </div>
+          </div>
+      
+          <div class="teaser-visuals">
+            <div class="teaser-visual">
+              <img src="static\gifs\text_inpaint\hike3.gif" muted autoplay loop style="width: 100%; max-width: 20em; border-radius: 0.3em; box-shadow: 0 0 1em 0em rgba(0, 0, 0, 0.15);">
+            </div>
+            <div class="teaser-visual">
+              <video src="static\gifs\text_inpaint\hike3_moon.mp4" muted autoplay loop style="width: 100%; max-width: 20em; border-radius: 0.3em; box-shadow: 0 0 1em 0em rgba(0, 0, 0, 0.15);"></video>
+              <p class="caption">At night with moonlight.</p>
+            </div>
+            <div class="teaser-visual">
+              <video src="static\gifs\text_inpaint\hike3_2.mp4" muted autoplay loop style="width: 100%; max-width: 20em; border-radius: 0.3em; box-shadow: 0 0 1em 0em rgba(0, 0, 0, 0.15);"></video>
+              <p class="caption">In the late evening.</p>
+            </div>
+          </div>
+          
+          <div class="teaser-visuals">
+            <div class="teaser-visual">
+              <video src="static\gifs\text_inpaint\car_fg.mp4" muted autoplay loop style="width: 100%; max-width: 20em; border-radius: 0.3em; box-shadow: 0 0 1em 0em rgba(0, 0, 0, 0.15);"></video>
+            </div>
+            <div class="teaser-visual">
+              <video src="static\gifs\text_inpaint\car1.mp4" muted autoplay loop style="width: 100%; max-width: 20em; border-radius: 0.3em; box-shadow: 0 0 1em 0em rgba(0, 0, 0, 0.15);"></video>
+              <p class="caption">a car driving on the street, neon light</p>
+            </div>
+            <div class="teaser-visual">
+              <video src="static\gifs\text_inpaint\car2.mp4" muted autoplay loop style="width: 100%; max-width: 20em; border-radius: 0.3em; box-shadow: 0 0 1em 0em rgba(0, 0, 0, 0.15);"></video>
+              <p class="caption">a car driving on the beach, sunset over sea</p>
+            </div>
+          </div>
+          
+        </div>
+    </div>
+    <br>
+    <br>
+  </div>
+
+
+
+  <!-- Teaser results section -->
+  <div class="teaser">
+    <div class="teaser-title">Background-Conditioned Video Relighting</div>
+    <!-- <div style="max-width: 1300px; margin: 1em auto; font-size: 1.1em; line-height: 1.6;">
+      <p>
+      <strong>RelightVid</strong> performs BG-conditioned relighting, dynamically influencing the illumination of the foreground to achieve coherent and context-aware results.  
+      </p>
+    </div> -->
+    <section>
+      <p>
+        <strong>RelightVid</strong> performs BG-conditioned relighting, dynamically influencing the illumination of the foreground to achieve coherent and context-aware results.
+      </p>
+      <p>
+        <span style="font-weight:600;">🎞️ Background Inputs:</span> The first row shows different background videos serving as lighting conditions.
+      </p>
+      <p>
+        <span style="font-weight:600;">💡 Foreground Relighting:</span> The following rows show the same foreground adaptively relighted under each background condition.
+      </p>
+      <br>
+    </section>
+    
+    <div class="teaser-visuals">
+      <div class="teaser-visual">
+        <p style="font-size: larger;">BG Video A</p>
+        <video src="static/gifs/bg/22.mp4" muted autoplay loop style="width: 75%; max-width: 20em; border-radius: 0.3em; box-shadow: 0 0 1em 0em rgba(0, 0, 0, 0.15);"></video>
+      </div>
+      <div class="teaser-visual">
+        <p style="font-size: larger;">BG Video B</p>
+        <video src="static/gifs/bg/23.mp4" muted autoplay loop style="width: 75%; max-width: 20em; border-radius: 0.3em; box-shadow: 0 0 1em 0em rgba(0, 0, 0, 0.15);"></video>
+      </div> 
+      <div class="teaser-visual">
+        <p style="font-size: larger;">BG Video C</p>
+        <video src="static/gifs/bg/55.mp4" muted autoplay loop style="width: 75%; max-width: 20em; border-radius: 0.3em; box-shadow: 0 0 1em 0em rgba(0, 0, 0, 0.15);"></video>
+      </div>
+    </div>
+    <br>
+<!-- 14_22 14_55 -->
+    <div class="teaser-visuals">
+      <div class="teaser-visual">
+        <video src="static/gifs/bg/14_22_100fps.mp4" muted autoplay loop style="width: 100%; max-width: 20em; border-radius: 0.3em; box-shadow: 0 0 1em 0em rgba(0, 0, 0, 0.15);"></video>
+      </div>
+      <div class="teaser-visual">
+        <video src="static/gifs/bg/14_23_100fps.mp4" muted autoplay loop style="width: 100%; max-width: 20em; border-radius: 0.3em; box-shadow: 0 0 1em 0em rgba(0, 0, 0, 0.15);"></video>
+      </div>
+      <div class="teaser-visual">
+        <video src="static/gifs/bg/14_55_100fps.mp4" muted autoplay loop style="width: 100%; max-width: 20em; border-radius: 0.3em; box-shadow: 0 0 1em 0em rgba(0, 0, 0, 0.15);"></video>
+      </div>
+    </div>
+    <br>
+<!-- general: 39 55 -->
+<!-- 18_23 18_47 -->
+    <div class="teaser-visuals">
+      <div class="teaser-visual">
+        <video src="static/gifs/bg/15_22_100fps.mp4" muted autoplay loop style="width: 100%; max-width: 20em; border-radius: 0.3em; box-shadow: 0 0 1em 0em rgba(0, 0, 0, 0.15);"></video>
+      </div>
+      <div class="teaser-visual">
+        <video src="static/gifs/bg/15_23_100fps.mp4" muted autoplay loop style="width: 100%; max-width: 20em; border-radius: 0.3em; box-shadow: 0 0 1em 0em rgba(0, 0, 0, 0.15);"></video>
+      </div>
+      <div class="teaser-visual">
+        <video src="static/gifs/bg/15_55_100fps.mp4" muted autoplay loop style="width: 100%; max-width: 20em; border-radius: 0.3em; box-shadow: 0 0 1em 0em rgba(0, 0, 0, 0.15);"></video>
+      </div>
+    </div>
+    <br>
+
+    <div class="teaser-visuals">
+      <div class="teaser-visual">
+        <video src="static/gifs/bg/18_22_100fps.mp4" muted autoplay loop style="width: 100%; max-width: 20em; border-radius: 0.3em; box-shadow: 0 0 1em 0em rgba(0, 0, 0, 0.15);"></video>
+      </div>
+      <div class="teaser-visual">
+        <video src="static/gifs/bg/18_23_100fps.mp4" muted autoplay loop style="width: 100%; max-width: 20em; border-radius: 0.3em; box-shadow: 0 0 1em 0em rgba(0, 0, 0, 0.15);"></video>
+      </div>
+      <div class="teaser-visual">
+        <video src="static/gifs/bg/18_55_100fps.mp4" muted autoplay loop style="width: 100%; max-width: 20em; border-radius: 0.3em; box-shadow: 0 0 1em 0em rgba(0, 0, 0, 0.15);"></video>
+      </div>
+    </div>
+    <br>
+  </div>
+
+    <!-- Teaser results section -->
+  <div class="teaser">
+    <div class="teaser-title">HDR-Conditioned Video Relighting</div>
+      <p class="teaser-description">
+        Videos generated by <b>RelightVid</b> maintain consistent object illumination over time by leveraging dynamic <b><i>HDR-conditioned lighting</i></b>. The first row shows temporal HDR environment maps as lighting conditions, while the second row presents the relighted results under each corresponding HDR.
+
+      <div id="carousel-demo5" class="owl-carousel">
+        <div class="item">
+          <div class="teaser-visuals">
+            <div class="teaser-visual" style="display: flex; flex-direction: column; align-items: center;">
+              <p style="font-size: larger;">Input Video/OBJ.</p>
+              <img src="static\gifs\hdr\guitar.png" muted autoplay loop style="width: 50%; max-width: 20em; border-radius: 0.3em; box-shadow: 0 0 1em 0em rgba(0, 0, 0, 0.15);">
+            </div>
+            <div class="teaser-visual">
+              <p style="font-size: larger;">Temporal HDR A</p>
+              <video src="static/gifs/hdr/2_iclight.mp4" muted autoplay loop style="width: 100%; max-width: 20em; border-radius: 0.3em; box-shadow: 0 0 1em 0em rgba(0, 0, 0, 0.15);"></video>
+            </div> 
+            <div class="teaser-visual">
+              <p style="font-size: larger;">Temporal HDR B</p>
+              <video src="static/gifs/hdr/3_iclight.mp4" muted autoplay loop style="width: 100%; max-width: 20em; border-radius: 0.3em; box-shadow: 0 0 1em 0em rgba(0, 0, 0, 0.15);"></video>
+            </div>
+          </div>
+          <br>
+
+          <div class="teaser-visuals">
+            <div class="teaser-visual">
+              <video src="static/gifs/hdr/gt_iclight.mp4" muted autoplay loop style="width: 100%; max-width: 20em; border-radius: 0.3em; box-shadow: 0 0 1em 0em rgba(0, 0, 0, 0.15);"></video>
+            </div>
+            <div class="teaser-visual">
+              <video src="static/gifs/hdr/output_iclight.mp4" muted autoplay loop style="width: 100%; max-width: 20em; border-radius: 0.3em; box-shadow: 0 0 1em 0em rgba(0, 0, 0, 0.15);"></video>
+            </div>
+            <div class="teaser-visual">
+              <video src="static/gifs/hdr/output_iclight2.mp4" muted autoplay loop style="width: 100%; max-width: 20em; border-radius: 0.3em; box-shadow: 0 0 1em 0em rgba(0, 0, 0, 0.15);"></video>
+            </div>
+          </div>
+          <br>
+  
+        </div>
+
+          <div class="item">
+   
+            <div class="teaser-visuals">
+              <div class="teaser-visual" style="display: flex; flex-direction: column; align-items: center;">
+                <p style="font-size: larger;">Input Video/OBJ.</p>
+                <img src="static\gifs\hdr\paotai.png" muted autoplay loop style="width: 50%; max-width: 20em; border-radius: 0.3em; box-shadow: 0 0 1em 0em rgba(0, 0, 0, 0.15);">        </div>
+              <div class="teaser-visual">
+                <p style="font-size: larger;">Temporal HDR A</p>
+                <video src="static\gifs\hdr\hdr1.mp4" muted autoplay loop style="width: 100%; max-width: 20em; border-radius: 0.3em; box-shadow: 0 0 1em 0em rgba(0, 0, 0, 0.15);"></video>
+              </div> 
+              <div class="teaser-visual">
+                <p style="font-size: larger;">Temporal HDR B</p>
+                <video src="static\gifs\hdr\hdr4.mp4" muted autoplay loop style="width: 100%; max-width: 20em; border-radius: 0.3em; box-shadow: 0 0 1em 0em rgba(0, 0, 0, 0.15);"></video>
+              </div>
+            </div>
+            <br>
+  
+            <div class="teaser-visuals">
+              <div class="teaser-visual">
+                <video src="static/gifs/hdr/ori1.mp4" muted autoplay loop style="width: 100%; max-width: 20em; border-radius: 0.3em; box-shadow: 0 0 1em 0em rgba(0, 0, 0, 0.15);"></video>
+              </div>
+              <div class="teaser-visual">
+                <video src="static/gifs/hdr/output.mp4" muted autoplay loop style="width: 100%; max-width: 20em; border-radius: 0.3em; box-shadow: 0 0 1em 0em rgba(0, 0, 0, 0.15);"></video>
+              </div>
+              <div class="teaser-visual">
+                <video src="static/gifs/hdr/output1.mp4" muted autoplay loop style="width: 100%; max-width: 20em; border-radius: 0.3em; box-shadow: 0 0 1em 0em rgba(0, 0, 0, 0.15);"></video>
+              </div>
+            </div>
+    
+          </div>
+
+      </div>
+      <br>
+      <br>
+    </div>
+
+    
+  <div class="teaser">
+    <div class="teaser-title">Dataset Pipeline</div>
+    <p class="teaser-description">
+      <!-- <span style="color: #CC0000;">Red</span>-colored blocks represent layers optimized by the <span style="color: #CC0000;">diffusion loss</span>,
+      while <span style="color: #097969;">green</span> blocks are optimized by the <span style="color: #097969;">correspondence loss</span>. 
+      Blocks colored both <span style="color: #CC0000;">red</span> and <span style="color: #097969;">green</span> are influenced by the joint <span style="color: #CC0000;">diffusion</span> and <span style="color: #097969;">correspondence</span> loss. -->
+      
+        <b>LightAtlas data pipeline overview.</b> Our custom augmentation pipeline generates high-quality video relighting pairs from
+        both in-the-wild videos and 3D-rendered data. <span style="color: #DAA520;">Left</span> side extracts five types of augmented data
+        from the original video using <span style="color: #DAA520;">n>in-the-wild sources</span>. 
+        <span style="color: #1E90FF;">Right</span> side shows <span style="color: #1E90FF;">3D-rendered video pairs</span> 
+        generated under varying HDR maps and random camera trajectories, enhancing both diversity and realism of relighting data.
+      
+      <!-- 1E90FF DAA520 -->
+
+    </p>
+    <div class="teaser-visuals">
+      <div class="teaser-visual">
+        <img style="width: 1238px; height: 472px; border-radius: 0; box-shadow: 0 0 0 0;" src="static/gifs/dataset.jpg">
+      </div>
+    
+    </div>
+    <br>
+  </div>
+
+  <div class="teaser">
+    <div class="teaser-title">Model Architecture</div>
+    <p class="teaser-description">
+      <b>RelightVid</b> enhances video relighting by strategically inserting trainable temporal layers into the pretrained diffusion framework for image illumination editing (IC-Light),
+       while effectively integrating <i>background videos, text prompts and HDR maps</i> through concatenation and illumination cross attention, enabling flexible and temporal-consistentl video relighting.
+
+    </p>
+    <div class="teaser-visuals">
+      <div class="teaser-visual">
+        <img style="width: 1127px; height: 571px; border-radius: 0; box-shadow: 0 0 0 0;" src="static/gifs/model.jpg">
+      </div>
+    
+    </div>
+    <br>
+
+  </div>
+
+  <div class="teaser">
+    <div class="teaser-title">Citation</div>
+    <!-- <p class="teaser-description" style="text-align: left; max-width: 1000px; margin: auto;">
+      If you find our work useful, please consider citing:
+    </p> -->
+    <div style="background-color: #f4f4f4; padding: 1.2em; border-radius: 0.5em; box-shadow: 0 0 1em rgba(0, 0, 0, 0.05); max-width: 1100px; margin: 1.5em auto;">
+      <pre style="white-space: pre-wrap; text-align: left; font-family: monospace; font-size: 1.08em; overflow-x: auto; margin: 0;">
+  <code>@misc{fang2025relightvidtemporalconsistentdiffusionmodel,
+    title={RelightVid: Temporal-Consistent Diffusion Model for Video Relighting}, 
+    author={Ye Fang and Zeyi Sun and Shangzhan Zhang and Tong Wu and Yinghao Xu and Pan Zhang and Jiaqi Wang and Gordon Wetzstein and Dahua Lin},
+    year={2025},
+    eprint={2501.16330},
+    archivePrefix={arXiv},
+    primaryClass={cs.CV},
+    url={https://arxiv.org/abs/2501.16330}, 
+}</code></pre>
+    </div>
+  </div>
+  
+  
+</body>
+
+<script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=default'></script>
+</div>
+</body>
+
+
+</html>
