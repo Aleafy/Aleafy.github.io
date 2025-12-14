@@ -6,6 +6,8 @@
     <meta name="keywords" content="Video Editing, Image-to-Video Model">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>V-RGBX: Video Editing with Accurate Controls over Intrinsic Properties</title>
+    <link rel="icon" type="image/png" href="static/figures/logos/logo.png">
+
   
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script>
@@ -138,12 +140,16 @@
     <div class="container is-max-desktop">
       <div class="columns is-centered">
         <div class="column has-text-centered">
-          <h1 class="title is-1 publication-title">V-RGBX: Video Editing with Accurate Controls over Intrinsic Properties</h1>
+          <!-- <h1 class="title is-1 publication-title">V-RGBX: Video Editing with Accurate Controls over Intrinsic Properties</h1> -->
+          <h1 class="title is-1 publication-title">
+            V-<span class="rgbx-gradient">RGBX</span>:
+            Video Editing with Accurate Controls over Intrinsic Properties
+          </h1>          
           <div class="is-size-5 publication-authors">
             <span class="author-block">
               <a href="https://github.com/Aleafy">Ye Fang</a><sup>1,2</sup>,</span>
             <span class="author-block">
-              <a href="https://wutong16.github.io/">Tong Wu</a><sup>3</sup>,</span>
+              <a href="https://wutong16.github.io/">Tong Wu✉️</a><sup>3</sup>,</span>
             <span class="author-block">
               <a href="https://valentin.deschaintre.fr/">Valentin Deschaintre</a><sup>2</sup>,
             </span>
@@ -153,6 +159,7 @@
             <span class="author-block">
               <a href="https://iliyan.com/">Iliyan Georgiev</a><sup>2</sup>
             </span>
+            <br>
             <span class="author-block">
               <a href="https://paulchhuang.wixsite.com/chhuang">Chun-Hao Paul Huang</a><sup>2</sup>
             </span>
@@ -163,7 +170,7 @@
               <a href="https://xuelin-chen.github.io/">Xuelin Chen</a><sup>2</sup>
             </span>
             <span class="author-block">
-              <a href="https://tuanfeng.github.io/">Tuanfeng Yang Wang</a><sup>2</sup>
+              <a href="https://tuanfeng.github.io/">Tuanfeng Yang Wang✉️</a><sup>2</sup>
             </span>
           </div>
           <div class="is-size-5 publication-authors">
@@ -171,6 +178,13 @@
             <span class="author-block"><sup>2</sup>Adobe Research,</span>
             <span class="author-block"><sup>3</sup>Stanford University</span>
           </div>
+
+          <div class="publication-logos">
+            <img src="static/figures/logos/fudan2.png" alt="Fudan University">
+            <img src="static/figures/logos/adobe.png" alt="Adobe Research">
+            <img src="static/figures/logos/stanford2.png" alt="Stanford University">
+          </div>
+
           <!-- <h1 class="title is-4">SIGGRAPH ASIA 24</h1> -->
           <div class="column has-text-centered">
             <div class="publication-links">
@@ -181,19 +195,19 @@
                 </a>
               </span> -->
               <span class="link-block">
-                <a href="https://arxiv.org/abs/2405.16537" class="external-link button is-normal is-rounded is-dark">
+                <a href="https://arxiv.org/abs/" class="external-link button is-normal is-rounded is-dark">
                   <span class="icon"><i class="ai ai-arxiv"></i></span>
                   <span>arXiv</span>
                 </a>
               </span>
               <span class="link-block">
-                <a href="https://www.youtube.com/watch?v=QCxLgimTLwY" class="external-link button is-normal is-rounded is-dark">
+                <a href="https://www.youtube.com/watch?v=j5yGqvB-BP0" class="external-link button is-normal is-rounded is-dark">
                   <span class="icon"><i class="fab fa-youtube"></i></span>
                   <span>Video</span>
                 </a>
               </span>
               <span class="link-block">
-                <a href="https://github.com/Vicky0522/I2VEdit" class="external-link button is-normal is-rounded is-dark">
+                <a href="https://github.com/Aleafy/V-RGBX" class="external-link button is-normal is-rounded is-dark">
                   <span class="icon"><i class="fab fa-github"></i></span>
                   <span>Code</span>
                 </a>
@@ -233,7 +247,7 @@
           <div class="content has-text-justified">
             <p>
               Large-scale video generation models have shown remarkable potential in modeling photorealistic appearance and lighting interactions in real-world scenes. However, a closed-loop framework that jointly understands intrinsic scene properties (e.g., albedo, normal, material, and irradiance), leverages them for video synthesis, and supports editable intrinsic representations remains unexplored.</p>
-            <p>  We present V-RGBX, the first end-to-end framework for intrinsic-aware video editing. V-RGBX unifies three key capabilities: (1) video inverse rendering into intrinsic channels, (2) photorealistic video synthesis from these intrinsic representations, and (3) keyframe-based video editing conditioned on intrinsic channels. At the core of V-RGBX is an interleaved conditioning mechanism that enables intuitive, physically grounded video editing through user-selected keyframes, supporting flexible manipulation of any intrinsic modality.</p>
+            <p>  We present <em>V</em>-<span class="rgbx-gradient">RGBX</span>, the first end-to-end framework for intrinsic-aware video editing. V-RGBX unifies three key capabilities: <b>(1) video inverse rendering into intrinsic channels</b>, <b>(2) photorealistic video synthesis from these intrinsic representations</b>, and <b>(3) keyframe-based video editing conditioned on intrinsic channels</b>. At the core of V-RGBX is an interleaved conditioning mechanism that enables intuitive, physically grounded video editing through user-selected keyframes, supporting flexible manipulation of any intrinsic modality.</p>
             <p>  Extensive qualitative and quantitative results show that V-RGBX produces temporally consistent, photorealistic videos while propagating keyframe edits across sequences in a physically plausible manner. We demonstrate its effectiveness in diverse applications, including object appearance editing and scene-level relighting, surpassing the performance of prior methods. </p>
             <!-- <p>
             In light of this gap, we introduce a novel and generic solution that extends the applicability of image editing tools to videos by propagating edits from a single frame to the entire video using a pre-trained image-to-video model. Our method, dubbed I2VEdit, adaptively preserves the visual and motion integrity of the source video depending on the extent of the edits, effectively handling global edits, local edits, and moderate shape changes, which existing methods cannot fully achieve.
@@ -254,7 +268,7 @@
           <h2 class="title is-3">Video</h2>
   
           <div class="video-wrapper">
-            <iframe src="https://www.youtube.com/embed/QCxLgimTLwY?rel=0&amp;showinfo=0"
+            <iframe src="https://www.youtube.com/embed/j5yGqvB-BP0?rel=0&amp;showinfo=0"
                     allow="autoplay; encrypted-media" allowfullscreen>
             </iframe>
           </div>
@@ -372,12 +386,12 @@
                 
                 <!-- <div class="item item-steve">
                     <video poster="index.html" id="steve" autoplay controls muted loop playsinline style="width: 100%;">
-                      <source src="static/I2VEdit_videos/cropped_demo-sora_kimono-roboto.mp4" type="video/mp4">
+                      <source src="static/results/intrinsic_editing1.mp4" type="video/mp4">
                     </video>
                   </div> -->
 
                   <div class="item item-steve">
-                    <img src="static/results/intrinsic_editing1111111.gif"
+                    <img src="static/results/intrinsic_editing1.gif"
                          style="width: 100%;">
                 </div>
                   <!-- <div class="item item-chair-tp">
