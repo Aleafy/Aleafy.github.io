@@ -2,25 +2,6 @@ body {
   font-family: 'Noto Sans', sans-serif;
 }
 
-.rgbx-gradient {
-  background: linear-gradient(
-    90deg,
-    #e53935 0%,   /* R: 深红 */
-    #43a047 33%,  /* G: 深绿 */
-    #1e88e5 66%,  /* B: 深蓝 */
-    #8e24aa 100%  /* X: 紫 */
-  );
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-
-  font-weight: 700;
-  letter-spacing: -0.02em; /* 防止渐变显散 */
-}
-
-.content .rgbx-gradient {
-  font-weight: 600;         /* 比标题轻一点 */
-  letter-spacing: -0.01em;  /* 正文更自然 */
-}
 
 
 .publication-logos {
