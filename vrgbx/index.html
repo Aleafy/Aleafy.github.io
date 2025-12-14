@@ -150,6 +150,30 @@
         letter-spacing: -0.01em;  /* 正文更自然 */
       }
 
+      .publication-logos {
+        margin-top: 1.2em;
+        margin-bottom: 1.2em;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 2.5em;   /* logo 之间的间距 */
+        flex-wrap: wrap;
+      }
+
+      .publication-logos img {
+        height: 48px;          /* 👈 控制整体视觉高度 */
+        max-width: 160px;
+        object-fit: contain;
+      }
+
+      .publication-logos img:nth-child(2) {
+        height: 52px;
+      }
+
+      .publication-logos img:nth-child(1) {
+        height: 50px;
+      }
+
     </style>
   
   </head>
@@ -200,11 +224,11 @@
             <span class="author-block"><sup>3</sup>Stanford University</span>
           </div>
 
-          <!-- <div class="publication-logos">
+          <div class="publication-logos">
             <img src="static/figures/logos/fudan2.png" alt="Fudan University">
             <img src="static/figures/logos/adobe.png" alt="Adobe Research">
             <img src="static/figures/logos/stanford2.png" alt="Stanford University">
-          </div> -->
+          </div>
 
           <!-- <h1 class="title is-4">SIGGRAPH ASIA 24</h1> -->
           <div class="column has-text-centered">

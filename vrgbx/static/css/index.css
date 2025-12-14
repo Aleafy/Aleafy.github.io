@@ -4,35 +4,6 @@ body {
 
 
 
-.publication-logos {
-  margin-top: 1.2em;
-  margin-bottom: 1.2em;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 2.5em;   /* logo 之间的间距 */
-  flex-wrap: wrap;
-}
-
-.publication-logos img {
-  height: 48px;          /* 👈 控制整体视觉高度 */
-  max-width: 160px;
-  object-fit: contain;
-}
-
-/* .publication-logos img:nth-child(1) {
-  height: 54px;
-} */
-
-.publication-logos img:nth-child(2) {
-  height: 52px;
-}
-
-.publication-logos img:nth-child(1) {
-  height: 50px;
-}
-
-
 .footer .icon-link {
     font-size: 25px;
     color: #000;
