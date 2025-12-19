@@ -31,7 +31,7 @@ I also work closely with Dr. [Tong Wu](https://wutong16.github.io/). Prior to th
 
  
 My research interests include video generation and editing, intrinsic representations, and multimodal learning.
-I focus on building controllable and temporally consistent AIGC systems for video and 3D visual content.
+I focus on building controllable and world-consistent AIGC systems for video and 3D visual content.
 My recent work explores modeling intrinsic factors such as appearance, lighting, and materials to enable structured and interpretable visual representations.
 
 
