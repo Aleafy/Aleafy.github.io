@@ -129,7 +129,7 @@ Zeyi Sun$^\*$, **Ye Fang**$^\*$, Tong Wu, Pan Zhang, Yuhang Zang, Shu Kong, Yuan
 
 [RelightVid: Temporal-consistent diffusion model for video relighting](https://aleafy.github.io/relightvid/)
 
-**Ye Fang**$^\*$, Zeyi Sun$^\*$, Tong Wu, Jiaqi Wang, Ziwei Liu, Gordon Wetzstein, Dahua Lin
+**Ye Fang**$^\*$, Zeyi Sun$^\*$, Shangzhan Zhang, Tong Wu, Yinghao Xu, Pan Zhang, Jiaqi Wang, Gordon Wetzstein, Dahua Lin
 
 [**[Project]**](https://aleafy.github.io/relightvid/)&nbsp;
 [**[Paper]**](https://arxiv.org/abs/2501.16330)&nbsp;
@@ -143,7 +143,7 @@ Zeyi Sun$^\*$, **Ye Fang**$^\*$, Tong Wu, Pan Zhang, Yuhang Zang, Shu Kong, Yuan
 <hr> 
 [RelightVid: Temporal-consistent diffusion model for video relighting](https://aleafy.github.io/relightvid/) [Arxiv 2025]
 
-**Ye Fang**$^\*$, Zeyi Sun$^\*$, Tong Wu, Jiaqi Wang, Ziwei Liu, Gordon Wetzstein, Dahua Lin
+**Ye Fang**$^\*$, Zeyi Sun$^\*$, Shangzhan Zhang, Tong Wu, Yinghao Xu, Pan Zhang, Jiaqi Wang, Gordon Wetzstein, Dahua Lin
 
 [**[Project]**](https://aleafy.github.io/relightvid/)&nbsp;
 [**[Paper]**](https://arxiv.org/abs/2501.16330)&nbsp;
