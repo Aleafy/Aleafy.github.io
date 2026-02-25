@@ -41,12 +41,15 @@ If you are interested in academic collaboration or discussion, please feel free 
 
 
 # 🔥 News
+- *2026.01*: 🎉 Congratulations! One **first-author** paper **V-RGBX** has been accepted **[CVPR 2026](https://cvpr.thecvf.com/Conferences/2026)**.
 
-- *2025.07*: 🎉 Congratulations! **GPT4Point++** has been accepted **[IEEE TPAMI](https://ieeexplore.ieee.org/xpl/RecentIssue.jsp?punumber=34)**.
+- *2026.01*: 🎉 Congratulations! Our **GPT4Scene++** has been accepted **[ICLR 2026](https://iclr.cc/Conferences/2026)**.
+
+- *2025.07*: 🎉 Congratulations! Our **GPT4Point++** has been accepted **[IEEE TPAMI](https://ieeexplore.ieee.org/xpl/RecentIssue.jsp?punumber=34)**.
 
 - *2024.09*: 🎉 Congratulations! One **first-author** paper **Make-it-Real** accepted by **[NeurIPS 2024](https://neurips.cc/Conferences/2024)**.
 
-- *2024.03*: 🎉 Congratulations! Two **first-author** papers **Alpha-CLIP** and **GPT4Point** accepted by **[CVPR 2024](https://cvpr.thecvf.com/Conferences/2024)**.
+- *2024.03*: 🎉 Congratulations! Two **co-first-author** papers **Alpha-CLIP** and **GPT4Point** accepted by **[CVPR 2024](https://cvpr.thecvf.com/Conferences/2024)**.
 
 - *2023.09*: 🎓 Joined **Fudan University** as a Ph.D. student.
 
