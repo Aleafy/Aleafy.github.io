@@ -45,7 +45,7 @@ If you are interested in academic collaboration or discussion, please feel free 
 
 - *2026.01*: 🎉 Congratulations! Our **GPT4Scene** has been accepted **[ICLR 2026](https://iclr.cc/Conferences/2026)**.
 
-- *2025.07*: 🎉 Congratulations! Our **GPT4Point++** has been accepted **[IEEE TPAMI](https://ieeexplore.ieee.org/xpl/RecentIssue.jsp?punumber=34)**.
+- *2025.07*: 🎉 Congratulations! Our **GPT4Point++** has been accepted **[IEEE TPAMI 2025](https://ieeexplore.ieee.org/xpl/RecentIssue.jsp?punumber=34)**.
 
 - *2024.09*: 🎉 Congratulations! One **first-author** paper **Make-it-Real** accepted by **[NeurIPS 2024](https://neurips.cc/Conferences/2024)**.
 
