@@ -140,7 +140,7 @@ Zeyi Sun$^\*$, **Ye Fang**$^\*$, Tong Wu, Pan Zhang, Yuhang Zang, Shu Kong, Yuan
 </div> -->
 
 
-<hr> 
+<!-- <hr>  -->
 
 
 <div class='paper-box'><div class='paper-box-image'><div><div class="badge">ICLR 2026</div><img src='images/GPT4Scene.png' alt="sym" width="100%"></div></div>
