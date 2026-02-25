@@ -41,7 +41,7 @@ If you are interested in academic collaboration or discussion, please feel free 
 
 
 # 🔥 News
-- *2026.01*: 🎉 Congratulations! One **first-author** paper **V-RGBX** has been accepted **[CVPR 2026](https://cvpr.thecvf.com/Conferences/2026)**.
+- *2026.02*: 🎉 Congratulations! One **first-author** paper **V-RGBX** has been accepted **[CVPR 2026](https://cvpr.thecvf.com/Conferences/2026)**.
 
 - *2026.01*: 🎉 Congratulations! Our **GPT4Scene++** has been accepted **[ICLR 2026](https://iclr.cc/Conferences/2026)**.
 
