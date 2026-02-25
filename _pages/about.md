@@ -52,7 +52,7 @@ If you are interested in academic collaboration or discussion, please feel free 
 
 # 📝 Publications 
 
-<div class='paper-box'><div class='paper-box-image'><div><div class="badge">Arxiv 2025</div><img src='images/V-RGBX.png' alt="sym" width="100%"></div></div>
+<div class='paper-box'><div class='paper-box-image'><div><div class="badge">CVPR 2026</div><img src='images/V-RGBX.png' alt="sym" width="100%"></div></div>
 <div class='paper-box-text' markdown="1">
 
 [V-RGBX: Video Editing with Accurate Controls over Intrinsic Properties](https://aleafy.github.io/vrgbx/)
@@ -141,6 +141,21 @@ Zeyi Sun$^\*$, **Ye Fang**$^\*$, Tong Wu, Pan Zhang, Yuhang Zang, Shu Kong, Yuan
 
 
 <hr> 
+
+<div class='paper-box'><div class='paper-box-image'><div><div class="badge">ICLR 2026</div><img src='images/GPT4Scene.jpg' alt="sym" width="100%"></div></div>
+<div class='paper-box-text' markdown="1">
+
+[Gpt4scene: Understand 3d scenes from videos with vision-language models](https://github.com)
+
+Zhangyang Qi$^\*$, Zhixiong Zhang$^\*$, **Ye Fang**, Jiaqi Wang, Hengshuang Zhao
+
+[**[Project]**](https://gpt4scene.github.io/)&nbsp;
+[**[Paper]**](https://arxiv.org/abs/2501.01428)&nbsp;
+[**[Code]**](https://github.com/Qi-Zhangyang/GPT4Scene-and-VLN-R1)&nbsp;
+
+
+
+<hr> 
 [RelightVid: Temporal-consistent diffusion model for video relighting](https://aleafy.github.io/relightvid/) [Arxiv 2025]
 
 **Ye Fang**$^\*$, Zeyi Sun$^\*$, Shangzhan Zhang, Tong Wu, Yinghao Xu, Pan Zhang, Jiaqi Wang, Gordon Wetzstein, Dahua Lin
@@ -152,6 +167,7 @@ Zeyi Sun$^\*$, **Ye Fang**$^\*$, Tong Wu, Pan Zhang, Yuhang Zang, Shu Kong, Yuan
 
 
 
+
 <hr> 
 [GPT4Point++: Advancing Unified Point-Language Understanding and Generation](https://ieeexplore.ieee.org/abstract/document/11122591) [TPAMI 2025]
 
@@ -159,15 +175,6 @@ Zhangyang Qi, **Ye Fang**, Zeyi Sun, Xiaoyang Wu, Tong Wu, Jiaqi Wang, Dahua Lin
 
 [**[Paper]**](https://ieeexplore.ieee.org/abstract/document/11122591)&nbsp;
 
-
-<hr> 
-[Gpt4scene: Understand 3d scenes from videos with vision-language models](https://github.com) [Arxiv 2025]
-
-Zhangyang Qi$^\*$, Zhixiong Zhang$^\*$, **Ye Fang**, Jiaqi Wang, Hengshuang Zhao
-
-[**[Project]**](https://gpt4scene.github.io/)&nbsp;
-[**[Paper]**](https://arxiv.org/abs/2501.01428)&nbsp;
-[**[Code]**](https://github.com/Qi-Zhangyang/GPT4Scene-and-VLN-R1)&nbsp;
 
 
 <hr> 
