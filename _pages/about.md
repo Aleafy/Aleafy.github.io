@@ -146,7 +146,7 @@ Zeyi Sun$^\*$, **Ye Fang**$^\*$, Tong Wu, Pan Zhang, Yuhang Zang, Shu Kong, Yuan
 <div class='paper-box'><div class='paper-box-image'><div><div class="badge">ICLR 2026</div><img src='images/GPT4Scene.png' alt="sym" width="100%"></div></div>
 <div class='paper-box-text' markdown="1">
 
-[Gpt4scene: Understand 3d scenes from videos with vision-language models](https://github.com)
+[Gpt4scene: Understand 3d scenes from videos with vision-language models](https://gpt4scene.github.io/)
 
 Zhangyang Qi$^\*$, Zhixiong Zhang$^\*$, **Ye Fang**, Jiaqi Wang, Hengshuang Zhao
 
