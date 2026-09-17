@@ -1,0 +1,597 @@
+{
+  "groups": [
+    {
+      "id": "first-author",
+      "title": "(Co-)First Author Publications",
+      "papers": [
+        {
+          "id": "vrgbx",
+          "title": "V-RGBX: Video Editing with Accurate Controls over Intrinsic Properties",
+          "authors": [
+            {
+              "name": "Ye Fang",
+              "marker": ""
+            },
+            {
+              "name": "Tong Wu",
+              "marker": ""
+            },
+            {
+              "name": "Valentin Deschaintre",
+              "marker": ""
+            },
+            {
+              "name": "Duygu Ceylan",
+              "marker": ""
+            },
+            {
+              "name": "Iliyan Georgiev",
+              "marker": ""
+            },
+            {
+              "name": "Chun-Hao Paul Huang",
+              "marker": ""
+            },
+            {
+              "name": "Yiwei Hu",
+              "marker": ""
+            },
+            {
+              "name": "Xuelin Chen",
+              "marker": ""
+            },
+            {
+              "name": "Tuanfeng Yang Wang",
+              "marker": ""
+            }
+          ],
+          "venue": "CVPR 2026",
+          "image": "vrgbx-editing-showcase.jpg",
+          "links": [
+            {
+              "label": "Paper",
+              "url": "https://arxiv.org/pdf/2512.11799"
+            },
+            {
+              "label": "Project",
+              "url": "https://aleafy.github.io/vrgbx/"
+            },
+            {
+              "label": "Code",
+              "url": "https://github.com/Aleafy/V-RGBX"
+            },
+            {
+              "label": "Video",
+              "url": "https://www.youtube.com/watch?v=j5yGqvB-BP0"
+            }
+          ],
+          "role": "First author",
+          "highlight": "",
+          "short": "",
+          "video": "vrgbx-editing-showcase.mp4",
+          "poster": "vrgbx-editing-showcase.jpg",
+          "caption": "Original → edited · Light & materials",
+          "media_alt": "Three V-RGBX before-and-after editing cases: multi-attribute living room editing, real-world vase scene editing, and normal-controlled table geometry."
+        },
+        {
+          "id": "make-it-real",
+          "title": "Make-it-Real: Unleashing Large Multimodal Model for Painting 3D Objects with Realistic Materials",
+          "authors": [
+            {
+              "name": "Ye Fang",
+              "marker": "*"
+            },
+            {
+              "name": "Zeyi Sun",
+              "marker": "*"
+            },
+            {
+              "name": "Tong Wu",
+              "marker": ""
+            },
+            {
+              "name": "Jiaqi Wang",
+              "marker": ""
+            },
+            {
+              "name": "Ziwei Liu",
+              "marker": ""
+            },
+            {
+              "name": "Gordon Wetzstein",
+              "marker": ""
+            },
+            {
+              "name": "Dahua Lin",
+              "marker": ""
+            }
+          ],
+          "venue": "NeurIPS 2024",
+          "image": "make-it-real-environment-large.jpg",
+          "links": [
+            {
+              "label": "Paper",
+              "url": "https://arxiv.org/abs/2404.16829"
+            },
+            {
+              "label": "Project",
+              "url": "https://sunzey.github.io/Make-it-Real/"
+            },
+            {
+              "label": "Code",
+              "url": "https://github.com/Aleafy/Make_it_Real"
+            },
+            {
+              "label": "Video",
+              "url": "https://www.youtube.com/watch?v=_j-t8592GCM"
+            }
+          ],
+          "role": "First author · Equal contribution",
+          "highlight": "",
+          "short": "",
+          "video": "make-it-real-environment-large.mp4",
+          "poster": "make-it-real-environment-large.jpg",
+          "caption": "Materials under changing views",
+          "media_alt": "Make-it-Real truck and globe with animated before-and-after material comparison sliders, followed by an eight-object gallery over a subtle material-sphere background."
+        },
+        {
+          "id": "relightvid",
+          "title": "RelightVid: Temporal-Consistent Diffusion Model for Video Relighting",
+          "authors": [
+            {
+              "name": "Ye Fang",
+              "marker": "*"
+            },
+            {
+              "name": "Zeyi Sun",
+              "marker": "*"
+            },
+            {
+              "name": "Shangzhan Zhang",
+              "marker": ""
+            },
+            {
+              "name": "Tong Wu",
+              "marker": ""
+            },
+            {
+              "name": "Yinghao Xu",
+              "marker": ""
+            },
+            {
+              "name": "Pan Zhang",
+              "marker": ""
+            },
+            {
+              "name": "Jiaqi Wang",
+              "marker": ""
+            },
+            {
+              "name": "Gordon Wetzstein",
+              "marker": ""
+            },
+            {
+              "name": "Dahua Lin",
+              "marker": ""
+            }
+          ],
+          "venue": "Preprint 2025",
+          "image": "relightvid-selected-cases.jpg",
+          "links": [
+            {
+              "label": "Paper",
+              "url": "https://arxiv.org/abs/2501.16330"
+            },
+            {
+              "label": "Project",
+              "url": "https://aleafy.github.io/relightvid/"
+            },
+            {
+              "label": "Code",
+              "url": "https://github.com/Aleafy/RelightVid"
+            },
+            {
+              "label": "Video",
+              "url": "https://www.youtube.com/watch?v=8yTOgCgMyIM"
+            }
+          ],
+          "role": "First author · Equal contribution",
+          "highlight": "",
+          "short": "",
+          "video": "relightvid-selected-cases.mp4",
+          "poster": "relightvid-selected-cases.jpg",
+          "caption": "Video relighting under varied illumination",
+          "media_alt": "Three selected RelightVid cases: dancing under dappled sunlight, motorcycle under softbox and fiery lighting with text prompts, and a portrait with beach lighting on the left and dynamic blue stage lighting on the right, including synchronized background-video insets."
+        },
+        {
+          "id": "gpt-policy",
+          "title": "In-Context Robot Learning with VLM Agents",
+          "authors": [
+            {
+              "name": "Dongzhou Cheng",
+              "marker": "*"
+            },
+            {
+              "name": "Taoran Yi",
+              "marker": "*"
+            },
+            {
+              "name": "Ye Fang",
+              "marker": "*"
+            },
+            {
+              "name": "Xingwu Zhang",
+              "marker": "*"
+            },
+            {
+              "name": "Fan Feng",
+              "marker": "*"
+            },
+            {
+              "name": "Yixuan Li",
+              "marker": "*"
+            },
+            {
+              "name": "Gengxiong Zhuang",
+              "marker": "*"
+            },
+            {
+              "name": "Rongze Wang",
+              "marker": ""
+            },
+            {
+              "name": "Shuai Yang",
+              "marker": ""
+            },
+            {
+              "name": "Wei Song",
+              "marker": ""
+            },
+            {
+              "name": "Weizhi Xue",
+              "marker": ""
+            },
+            {
+              "name": "Minyan Wu",
+              "marker": ""
+            },
+            {
+              "name": "Jie Gui",
+              "marker": ""
+            },
+            {
+              "name": "Jiaqi Wang",
+              "marker": ""
+            },
+            {
+              "name": "Tong Wu",
+              "marker": "†"
+            }
+          ],
+          "venue": "Preprint 2026",
+          "image": "gpt-policy-complete-clean.jpg",
+          "links": [
+            {
+              "label": "Paper",
+              "url": "https://cheng-haha.github.io/GPT-Policy/paper.pdf?v=20260915-repository-rename"
+            },
+            {
+              "label": "Project",
+              "url": "https://cheng-haha.github.io/GPT-Policy/"
+            },
+            {
+              "label": "Code",
+              "url": "https://github.com/cheng-haha/GPT-Policy"
+            }
+          ],
+          "role": "Co-first author",
+          "highlight": "",
+          "short": "GPT-Policy",
+          "video": "gpt-policy-complete-clean.mp4",
+          "poster": "gpt-policy-complete-clean.jpg",
+          "caption": "In-context robot learning",
+          "media_alt": "Complete GPT-Policy demonstration arranging five blocks into the target T shape, accelerated to 60 times real time with a final-state hold."
+        },
+        {
+          "id": "gpt4point",
+          "title": "GPT4Point: A Unified Framework for Point-Language Understanding and Generation",
+          "authors": [
+            {
+              "name": "Zhangyang Qi",
+              "marker": "*"
+            },
+            {
+              "name": "Ye Fang",
+              "marker": "*"
+            },
+            {
+              "name": "Zeyi Sun",
+              "marker": "*"
+            },
+            {
+              "name": "Xiaoyang Wu",
+              "marker": ""
+            },
+            {
+              "name": "Tong Wu",
+              "marker": ""
+            },
+            {
+              "name": "Jiaqi Wang",
+              "marker": ""
+            },
+            {
+              "name": "Dahua Lin",
+              "marker": ""
+            },
+            {
+              "name": "Hengshuang Zhao",
+              "marker": ""
+            }
+          ],
+          "venue": "CVPR 2024",
+          "image": "gpt4point-overview.jpg",
+          "links": [
+            {
+              "label": "Paper",
+              "url": "https://arxiv.org/abs/2312.02980"
+            },
+            {
+              "label": "Project",
+              "url": "https://gpt4point.github.io/"
+            },
+            {
+              "label": "Code",
+              "url": "https://github.com/Pointcept/GPT4Point"
+            }
+          ],
+          "role": "Co-first author",
+          "highlight": "Highlight",
+          "short": "",
+          "video": "",
+          "poster": "gpt4point-overview.jpg",
+          "caption": "Point-language understanding & generation",
+          "media_alt": "GPT4Point overview: 3D recognition, captioning, question answering, and generation."
+        },
+        {
+          "id": "alpha-clip",
+          "title": "Alpha-CLIP: A CLIP Model Focusing on Wherever You Want",
+          "authors": [
+            {
+              "name": "Zeyi Sun",
+              "marker": "*"
+            },
+            {
+              "name": "Ye Fang",
+              "marker": "*"
+            },
+            {
+              "name": "Tong Wu",
+              "marker": ""
+            },
+            {
+              "name": "Pan Zhang",
+              "marker": ""
+            },
+            {
+              "name": "Yuhang Zang",
+              "marker": ""
+            },
+            {
+              "name": "Shu Kong",
+              "marker": ""
+            },
+            {
+              "name": "Yuanjun Xiong",
+              "marker": ""
+            },
+            {
+              "name": "Dahua Lin",
+              "marker": ""
+            },
+            {
+              "name": "Jiaqi Wang",
+              "marker": ""
+            }
+          ],
+          "venue": "CVPR 2024",
+          "image": "alpha-clip-four-demos.jpg",
+          "links": [
+            {
+              "label": "Paper",
+              "url": "https://arxiv.org/abs/2312.03818"
+            },
+            {
+              "label": "Project",
+              "url": "https://aleafy.github.io/alpha-clip/"
+            },
+            {
+              "label": "Code",
+              "url": "https://github.com/SunzeY/AlphaCLIP"
+            },
+            {
+              "label": "Video",
+              "url": "https://www.youtube.com/watch?v=UAUJNFJSbiI"
+            }
+          ],
+          "role": "Co-first author",
+          "highlight": "",
+          "short": "",
+          "video": "alpha-clip-four-demos.mp4",
+          "poster": "alpha-clip-four-demos.jpg",
+          "caption": "Region-aware understanding & generation",
+          "media_alt": "Four official Alpha-CLIP demos: region-focused captioning, question answering, 3D generation, and 2D generation."
+        }
+      ]
+    },
+    {
+      "id": "co-author",
+      "title": "Co-Author Publications",
+      "papers": [
+        {
+          "id": "gpt4scene",
+          "title": "GPT4Scene: Understand 3D Scenes from Videos with Vision-Language Models",
+          "authors": [
+            {
+              "name": "Zhangyang Qi",
+              "marker": "*"
+            },
+            {
+              "name": "Zhixiong Zhang",
+              "marker": "*"
+            },
+            {
+              "name": "Ye Fang",
+              "marker": ""
+            },
+            {
+              "name": "Jiaqi Wang",
+              "marker": ""
+            },
+            {
+              "name": "Hengshuang Zhao",
+              "marker": ""
+            }
+          ],
+          "venue": "ICLR 2026",
+          "image": "gpt4scene.jpg",
+          "links": [
+            {
+              "label": "Paper",
+              "url": "https://arxiv.org/abs/2501.01428"
+            },
+            {
+              "label": "Project",
+              "url": "https://gpt4scene.github.io/"
+            },
+            {
+              "label": "Code",
+              "url": "https://github.com/Qi-Zhangyang/GPT4Scene-and-VLN-R1"
+            }
+          ],
+          "role": "",
+          "highlight": "",
+          "short": "",
+          "video": "",
+          "poster": "gpt4scene.jpg",
+          "caption": "Video → 3D scene understanding",
+          "media_alt": "GPT4Scene visual overview from the project website."
+        },
+        {
+          "id": "gpt4point-plus",
+          "title": "GPT4Point++: Advancing Unified Point-Language Understanding and Generation",
+          "authors": [
+            {
+              "name": "Zhangyang Qi",
+              "marker": ""
+            },
+            {
+              "name": "Ye Fang",
+              "marker": ""
+            },
+            {
+              "name": "Zeyi Sun",
+              "marker": ""
+            },
+            {
+              "name": "Xiaoyang Wu",
+              "marker": ""
+            },
+            {
+              "name": "Tong Wu",
+              "marker": ""
+            },
+            {
+              "name": "Jiaqi Wang",
+              "marker": ""
+            },
+            {
+              "name": "Dahua Lin",
+              "marker": ""
+            },
+            {
+              "name": "Hengshuang Zhao",
+              "marker": ""
+            }
+          ],
+          "venue": "IEEE TPAMI 2025",
+          "image": "gpt4point-plus-architecture.jpg",
+          "links": [
+            {
+              "label": "Paper",
+              "url": "https://ieeexplore.ieee.org/abstract/document/11122591"
+            }
+          ],
+          "role": "",
+          "highlight": "",
+          "short": "",
+          "video": "",
+          "poster": "gpt4point-plus-architecture.jpg",
+          "caption": "Point-language understanding & generation",
+          "media_alt": "Architecture comparison of GPT4Point and GPT4Point++, from Hengshuang Zhao’s TPAMI 2025 publication entry."
+        },
+        {
+          "id": "gemini-gpt4v",
+          "title": "Gemini vs GPT-4V: A Preliminary Comparison and Combination of Vision-Language Models Through Qualitative Cases",
+          "authors": [
+            {
+              "name": "Zhangyang Qi",
+              "marker": ""
+            },
+            {
+              "name": "Ye Fang",
+              "marker": ""
+            },
+            {
+              "name": "Mengchen Zhang",
+              "marker": ""
+            },
+            {
+              "name": "Zeyi Sun",
+              "marker": ""
+            },
+            {
+              "name": "Tong Wu",
+              "marker": ""
+            },
+            {
+              "name": "Ziwei Liu",
+              "marker": ""
+            },
+            {
+              "name": "Dahua Lin",
+              "marker": ""
+            },
+            {
+              "name": "Jiaqi Wang",
+              "marker": ""
+            },
+            {
+              "name": "Hengshuang Zhao",
+              "marker": ""
+            }
+          ],
+          "venue": "Technical Report 2023",
+          "image": "gemini-gpt4v-comparison.jpg",
+          "links": [
+            {
+              "label": "Paper",
+              "url": "https://arxiv.org/abs/2312.15011"
+            },
+            {
+              "label": "Project",
+              "url": "https://github.com/Qi-Zhangyang/Gemini-vs-GPT4V"
+            }
+          ],
+          "role": "",
+          "highlight": "",
+          "short": "",
+          "video": "",
+          "poster": "gemini-gpt4v-comparison.jpg",
+          "caption": "Multimodal understanding & reasoning",
+          "media_alt": "Official Gemini vs GPT-4V qualitative example: chart-to-code generation with the input chart and both model outputs."
+        }
+      ]
+    }
+  ]
+}
